@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hustle Friends</title>
+    
+    <!-- Tab Icon -->
+    <link rel="icon" href="Assets/HF Rockstar Emblem.png" type="image/png">
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="CSS/banner_motion.css">
+
+
+</head> 
+<body class="bg-neutral-100 overflow-x-hidden">  
+
+<!-- == NavBar Start == -->
+<nav class="absolute top-0 left-0 w-full bg-gradient-to-b from-zinc-950 to-transparent border-gray-200 z-10">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-6">
+
+    <!-- Logo -->
+    <a href="https://www.facebook.com/hustlefriendstreetwear" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="Logo/HustleFriends-Logo__NoBG.png" class="h-9 sm:h-12 md:h-14 lg:h-16" alt="Hustle Friends Logo" />
+    </a>  
+
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+
+      <!-- Cart Button -->
+      <a href="ShoppingCart.html">
+        <button type="button" class="inline-flex items-center rounded-lg justify-center  px-2 py-2 lg:mx-3 hover:bg-zinc-800 text-sm font-medium leading-none text-stone-50 focus:bg-zinc-800">
+          <span class="sr-only"> Cart </span>
+          <!-- Cart Icon -->
+          <svg class="w-8 h-8 lg:me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+          </svg>
+        </button>      
+      </a>
+
+      <!-- User Profile -->
+      <div class="flex items-center lg:order-2 rounded-lg hover:bg-zinc-800 px-2">
+        <a href="AccountManager.html">
+          <img src="Assets/User Profile Icon.png" class="w-8 h-8 lg:me-1" alt="">
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Button -->
+      <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 text-sm text-stone-50 rounded-lg md:hidden hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-cta" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Navbar Items -->
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-zinc-700 rounded-lg bg-zinc-950 sm:bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+        <li class="group relative">
+          <a href="index.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0">Home</a>
+          <span class="absolute bottom-0 right-0 w-0 h-1 bg-red-600 rounded transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
+        </li>
+        <li class="group relative">
+          <a href="Catalog.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0">Catalog</a>
+          <span class="absolute bottom-0 right-0 w-0 h-1 bg-red-600 rounded transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
+        </li>
+        <li class="group relative">
+          <a href="#" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0">About</a>
+          <span class="absolute bottom-0 right-0 w-0 h-1 bg-red-600 rounded transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
+        </li>
+        <li class="group relative">
+          <a href="#" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0">Contact Us</a>
+          <span class="absolute bottom-0 right-0 w-0 h-1 bg-red-600 rounded transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
+        </li>        
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<!-- == NavBar End  == -->
+
+<!-- == Hero Sectiion Start == -->
+<section class="relative" style="background-image: url('Assets/HF Hero Section.png'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-gradient-to-b from-zinc-950 to-zinc-900 opacity-75"></div>
+  <div class="relative px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-stone-50 md:text-4xl lg:text-6xl"><span class="italic uppercase">For those who hustle</span> <span class="text-red-600 tracking-widest uppercase">nowadaze</span></h1>
+    <p class="mb-8 text-lg font-medium text-stone-300 lg:text-xl sm:px-16 xl:px-48 tracking-tight">Join the movement, embrace the culture, and wear your passion.</p>
+    <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4 ">
+        <a href="#" class="inline-flex justify-center items-center py-3 px-8 bg-stone-50 text-base font-medium text-center text-zinc-800 rounded-full border border-zinc-300 hover:text-zinc-950 hover:bg-stone-200 focus:ring-4 focus:ring-red-600">
+            <img class="mr-2 -ml-1 w-5 h-5" src="https://img.icons8.com/?size=100&id=6q6PvoIcXcSv&format=png&color=000000"> 
+            Start Shopping
+        </a>  
+    </div>
+  </div>
+</section>
+<!-- == Hero Sectiion End == -->
+
+<!-- == Banner Start == -->
+<div class="w-screen overflow-hidden bg-red-600">
+  <div class="whitespace-nowrap pt-2 pb-3" id="bannerContainer">
+    <!-- Populated with Banner.js -->
+  </div>
+</div>
+<!-- == Banner End   == -->
+
+<!-- == Products Start == -->
+<section class="bg-neutral-100 py-8 antialiased md:py-18">
+  <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
+    <!-- Heading & Filters -->
+    <div class="py-4 px-4 mx-auto max-w-screen-xl text-center lg:px-12">
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl">Our Featured Selections</h1>
+      <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 whitespace-pre-line">Each piece is a canvas of <span class="underline decoration-red-600 italic">creativity</span>.
+                 Let the world know you're part of the crew that turns the <span class="font-bold text-zinc-600">grind into glory.</span></p>            
+      </div>    
+    <div class="mb-4 grid gap-6 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4" id="featuredContainer">    
+      
+      <!-- Featured Products populated with JavaScript -->      
+      <div class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
+        <a class="relative flex h-60 overflow-hidden" href="#">
+          <img class="peer absolute top-0 right-0 h-full w-full object-cover" src="https://ibb.co/X8gLDSC" alt="product image" />
+          <img class="peer absolute top-0 -right-96 h-full w-full object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0" src="//i.ibb.co/0cvq1Mm/448775723-999204535540367-2527012685756063708-n.jpg" alt="product image" />
+          
+        </a>
+        <div class="mt-4 px-5 pb-5">
+          <a href="#">
+            <h5 class="text-xl tracking-tight text-slate-900">Lululemon Comfort Tee - White</h5>
+          </a>
+          <div class="mt-2 mb-5 flex items-center justify-between">
+            <p>
+              <span class="text-3xl font-bold text-slate-900">$79</span>
+              <span class="text-sm text-slate-900 line-through">$99</span>
+            </p>
+          </div>
+          <button class="flex items-center justify-center bg-gray-900 px-2 py-1 text-sm text-white transition hover:bg-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+            </svg>
+            Add to cart
+          </button>
+        </div>
+      </div>
+      
+
+</section>
+
+<section class="bg-neutral-100">  
+  <!-- Show more -->
+  <div class="w-full text-center mx-auto mb-16 ">
+    <a href="Catalog.html">
+      <button type="button" class="rounded-lg border border-red-600 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-neutral-100 hover:text-zinc-700 focus:ring-2 focus:ring-stone-200">Show more</button>
+    </a>
+  </div>
+
+</section>
+
+<!-- == Products End   == -->
+
+<!-- Footer -->
+<footer class="p-4 bg-zinc-950 sm:p-6 ">
+  <div class="mx-auto max-w-screen-xl pt-4">
+      <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a href="https://www.facebook.com/hustlefriendstreetwear" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="Logo/HustleFriends-Logo__NoBG.png" class="h-9 sm:h-12 md:h-14 lg:h-16" alt="Hustle Friends Logo" />
+            </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-stone-50 uppercase">Resources</h2>
+                  <ul class="text-gray-600 dark:text-gray-400">
+                      <li class="mb-4">
+                          <a href="https://flowbite.com" class="hover:underline">Flowbite</a>
+                      </li>
+                      <li>
+                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-stone-50 uppercase">Developers</h2>
+                  <ul class="text-gray-600 dark:text-gray-400">
+                      <li class="mb-4">
+                          <a href="https://www.facebook.com/hustlefriendstreetwear/" class="hover:underline ">Facebook</a>
+                      </li>
+                      <li>
+                          <a href="https://www.instagram.com/hustlefriendstreetwear/y" class="hover:underline">Instagram</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-stone-50 uppercase">Legal</h2>
+                  <ul class="text-gray-600 dark:text-gray-400">
+                      <li class="mb-4">
+                          <a href="#" class="hover:underline">Privacy Policy</a>
+                      </li>
+                      <li>
+                          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <hr class="my-6 border-zinc-700 sm:mx-auto lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-zinc-500 sm:text-center">© 2022 <a href="https://flowbite.com" class="hover:underline">Hustle Friends™</a>. All Rights Reserved.
+          </span>
+          <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+              <a href="https://www.facebook.com/hustlefriendstreetwear/" class="text-gray-500 hover:text-gray-90 ">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+              </a>
+              <a href="https://www.instagram.com/hustlefriendstreetwear/y" class="text-gray-500 hover:text-gray-900">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+              </a>
+             
+          </div>
+      </div>
+  </div>
+</footer>
+  
+
+   <!-- Tailwind CSS -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!-- Flowbite JS -->
+   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>   
+
+   <script src="JavaScript/Banner.js"></script>
+
+   <script src="Load_Products.js"></script>
+   
+   <script src="Add_To_Cart.js"></script>
+   <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+
+</body>
+</html>
