@@ -17,7 +17,7 @@
 
 
 </head> 
-<body class="bg-neutral-100 overflow-x-hidden">  
+<body class="bg-neutral-50 overflow-x-hidden">  
 
 <!-- == NavBar Start == -->
 <nav class="absolute top-0 left-0 w-full bg-gradient-to-b from-zinc-950 to-transparent border-gray-200 z-10">
@@ -109,46 +109,22 @@
 <!-- == Banner End   == -->
 
 <!-- == Products Start == -->
-<section class="bg-neutral-100 py-8 antialiased md:py-18">
+<section class="bg-neutral-50 py-8 antialiased md:py-18">
   <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
     <!-- Heading & Filters -->
     <div class="py-4 px-4 mx-auto max-w-screen-xl text-center lg:px-12">
-      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl">Our Featured Selections</h1>
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-zinc-950 md:text-4xl lg:text-5xl">Our Featured Selections</h1>
       <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 whitespace-pre-line">Each piece is a canvas of <span class="underline decoration-red-600 italic">creativity</span>.
                  Let the world know you're part of the crew that turns the <span class="font-bold text-zinc-600">grind into glory.</span></p>            
-      </div>    
-    <div class="mb-4 grid gap-6 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4" id="featuredContainer">    
-      
-      <!-- Featured Products populated with JavaScript -->      
-      <div class="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
-        <a class="relative flex h-60 overflow-hidden" href="#">
-          <img class="peer absolute top-0 right-0 h-full w-full object-cover" src="https://ibb.co/X8gLDSC" alt="product image" />
-          <img class="peer absolute top-0 -right-96 h-full w-full object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0" src="//i.ibb.co/0cvq1Mm/448775723-999204535540367-2527012685756063708-n.jpg" alt="product image" />
-          
-        </a>
-        <div class="mt-4 px-5 pb-5">
-          <a href="#">
-            <h5 class="text-xl tracking-tight text-slate-900">Lululemon Comfort Tee - White</h5>
-          </a>
-          <div class="mt-2 mb-5 flex items-center justify-between">
-            <p>
-              <span class="text-3xl font-bold text-slate-900">$79</span>
-              <span class="text-sm text-slate-900 line-through">$99</span>
-            </p>
-          </div>
-          <button class="flex items-center justify-center bg-gray-900 px-2 py-1 text-sm text-white transition hover:bg-gray-700">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-            </svg>
-            Add to cart
-          </button>
-        </div>
       </div>
-      
+
+    <div class="mb-4 grid gap-6 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4" id="FeaturedContainer">      
+      <!-- Populated with Load__Featured.js -->
+    </div>
 
 </section>
 
-<section class="bg-neutral-100">  
+<section class="bg-neutral-50">  
   <!-- Show more -->
   <div class="w-full text-center mx-auto mb-16 ">
     <a href="Catalog.html">
@@ -230,10 +206,9 @@
 
    <script src="JavaScript/Banner.js"></script>
 
-   <script src="Load_Products.js"></script>
+   <script src="JavaScript/Load__Featured.js"></script>
    
    <script src="Add_To_Cart.js"></script>
-   <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 
 </body>

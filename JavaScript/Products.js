@@ -3,24 +3,25 @@ const products = [
     {
         "id": 1,
         "productName": "Hustler's Club",
-        "type": ["Tshirt", "Featured"],
+        "color": "Moss Green",
+        "type": "Tshirt",
         "price": 650,
-        "ratings": "4.8",
-        "image1": "https://i.imgur.com/iF6WmEv.jpg",
-        "image2": "https://i.imgur.com/8BD6pe4.jpg",
-        "image3": "https://i.imgur.com/z9kmswI.jpg"
+        "image1": "https://i.ibb.co/PQnjMw6/448720495-999204618873692-3959771047578847438-n.jpg",
+        "image2": "https://i.ibb.co/0cvq1Mm/448775723-999204535540367-2527012685756063708-n.jpg",
+        "image3": "https://i.ibb.co/PjkGTdp/448658572-999204605540360-2586234433757712814-n.jpg",
+        "image4": "https://i.ibb.co/QjtDYnx/448629251-999204522207035-2859517267465158577-n.jpg"
     },
 
     {
         "id": 2,
-        "productName": "Hustle Over Love",
-        "type": ["Tshirt", "Featured"],
+        "productName": "HF Flower",
+        "color": "Navy Blue",
+        "type": "Tshirt",
         "price": 650,
-        "ratings": "4.8",
-        "image1": "https://i.imgur.com/9hvZEgC.jpg",
-        "image2": "https://i.imgur.com/GBpuTJW.jpg",
-        "image3": "https://i.imgur.com/TMkIGDI.jpg",
-        "image4": "https://i.imgur.com/y5XTlKV.jpg"
+        "image1": "https://i.ibb.co/PQnjMw6/448720495-999204618873692-3959771047578847438-n.jpg",
+        "image2": "https://i.ibb.co/0cvq1Mm/448775723-999204535540367-2527012685756063708-n.jpg",
+        "image3": "https://i.ibb.co/PjkGTdp/448658572-999204605540360-2586234433757712814-n.jpg",
+        "image4": "https://i.ibb.co/QjtDYnx/448629251-999204522207035-2859517267465158577-n.jpg"
     },
   ];
   
