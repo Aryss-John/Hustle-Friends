@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const productContainer = document.getElementById('ProductContainer');
+    const cartContainer = document.getElementById('CartContainer');
 
     function addProductsToDOM(products) {
         productContainer.innerHTML = ''; // Clear existing products
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const productHTML = `
                 <div class="group relative border border-zinc-200 p-3 rounded-lg" id="${product.id}">
                     <div class="aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80">
-                        <a href="${product.productName}.html">
+                        <a href="Product Pages/${product.productName}.html">
                             <img src="${product.image1}" class="h-full w-full object-cover object-center lg:h-full lg:w-full transition duration-200 group-hover:scale-125" alt="${product.productName}">
                         </a>
                     </div>
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 
                 <!-- Success Modal -->
-                <div id="successModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
+                <div id="successModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full inset-0 h-modal h-full bg-zinc-950/50">
                     <div class="relative p-4 w-full max-w-md h-full md:h-auto ">
                         <!-- Modal content -->
                         <div class="relative p-4 text-center bg-stone-50 rounded-lg shadow sm:p-5">
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span class="sr-only">Close modal</span>
                             </button>
                             <div class="w-12 h-12 rounded-full bg-green-500 p-2 flex items-center justify-center mx-auto mb-3.5 py-2">
-                                <svg aria-hidden="true" class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <svg aria-hidden="true" class="w-8 h-8 text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                                 <span class="sr-only">Success</span>
                             </div>
                             <p class="mb-4 text-lg font-semibold text-zinc-950 py-2 ">Successfully Added To Your Cart!</p>
@@ -59,7 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function addCartEventListeners() {
         document.querySelectorAll('.add-to-cart').forEach(button => {
-            button.addEventListener('click', () => {
+            button.addEventListener('click', (event) => {
+                const productId = button.getAttribute('data-product-id');
+                const product = products.find(p => p.id === productId);
+
+                if (product) {
+                    addToCart(product);
+                }
+
                 const modal = document.getElementById('successModal');
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');

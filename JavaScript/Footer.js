@@ -171,8 +171,7 @@ document.addEventListener("DOMContentLoaded", function() {
                </div>
            </div>
        </div>
-       </footer>            
-
+       </footer>         
         `;
        
     document.getElementById("FooterContainerinOverview").innerHTML = content;

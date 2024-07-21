@@ -80,7 +80,29 @@ const products = [
         "image3": "https://i.ibb.co/jrL7nxL/440793780-961315882662566-781219102587558912-n.jpg"
     },
 
+    {
+        "id": 8,
+        "productName": "HF Endlessly Creating Tee",
+        "color": "Cream",
+        "type": "Tshirt",
+        "price": 550,
+        "image1": "https://i.ibb.co/vPMWhL2/433497711-938585248268963-251582776481062596-n.jpg",
+        "image2": "https://i.ibb.co/t4dvGk1/434193975-938585228268965-8131716223819183425-n.jpg",
+        "image3": "https://i.ibb.co/CVBmvzX/433472692-938585261602295-3024100812403308503-n.jpg",
+        "image4": "https://i.ibb.co/JdVMTJW/433696764-938585221602299-3790173660479546003-n.jpg"
+    },
 
+    {
+        "id": 9,
+        "productName": "HF Cozy Mesh Shorts",
+        "color": "Cream",
+        "type": "Shorts",
+        "price": 350,
+        "image1": "https://i.ibb.co/jv8NKP6/449066503-1004540705006750-9192293920099988532-n.jpg",
+        "image2": "https://i.ibb.co/LYqJ5Z9/449066109-1004540715006749-2892819975220884522-n.jpg",
+        "image3": "https://i.ibb.co/h1zym1T/449144577-1004539271673560-8324347405767872681-n.jpg",
+        "image4": "https://i.ibb.co/jb2mYMw/449065811-1004540741673413-3228950967969981979-n.jpg"
+    },
   ];
   
   

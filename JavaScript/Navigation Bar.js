@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
       <!-- Logo -->
       <a href="https://www.facebook.com/hustlefriendstreetwear" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="Logo/HustleFriends-Logo__NoBG.png" class="h-12 sm:h-12 md:h-14 lg:h-16" alt="Hustle Friends Logo" />
+        <img src="/Logo/HustleFriends-Logo__NoBG.png" class="h-12 sm:h-12 md:h-14 lg:h-16" alt="Hustle Friends Logo" />
       </a>  
   
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
           <div class="flex items-center lg:order-2  rounded-lg hover:bg-zinc-800 px-3">
             <a href="Account Manager.html">
-              <img src="Assets/User Profile Icon.png" class="w-8 h-8 lg:me-1" alt="">
+              <img src="/Assets/User Profile Icon.png" class="w-8 h-8 lg:me-1" alt="">
             </a>
           </div>
   
@@ -113,19 +113,19 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
         <ul class="flex flex-col font-medium p-4 mt-4 border border-zinc-700 rounded-lg bg-zinc-950 sm:bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:p-0">
           <li class="group relative">
-            <a href="index.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">Home</a>
+            <a href="/index.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">Home</a>
             <span class="absolute bottom-0 right-0 w-0 h-1 bg-red-600 rounded transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
           </li>
           <li class="group relative">
-            <a href="Catalog.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">Catalog</a>
+            <a href="/Catalog.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">Catalog</a>
             <span class="absolute bottom-0 right-0 w-0 h-1 bg-red-600 rounded transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
           </li>
           <li class="group relative">
-            <a href="#" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">About</a>
+            <a href="About Page/about-us.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">About</a>
             <span class="absolute bottom-0 right-0 w-0 h-1 bg-red-600 rounded transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
           </li>
           <li class="group relative">
-            <a href="#" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">Contact Us</a>
+            <a href="ContactUs.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">Contact Us</a>
             <span class="absolute bottom-0 right-0 w-0 h-1 bg-red-600 rounded transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
           </li>        
         </ul>
