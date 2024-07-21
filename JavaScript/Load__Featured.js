@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var content = `
 
     <!-- ===== -->            
-            <div class="Featured product Top rounded-lg border border-zinc-300 bg-neutral-50 p-6 shadow-md transform duration-300 hover:scale-105 hover:shadow-2xl" id="Featured">
+            <div class="rounded-lg border border-zinc-300 bg-neutral-50 p-6 shadow-md transform duration-300 hover:scale-105 hover:shadow-2xl" id="Featured">
               <div class="h-56 w-full">
                 <a href="#" class="relative flex h-60 overflow-hidden rounded-md">
                     <img id="product-img" class="peer absolute top-0 right-0 h-full w-full object-cover" src="https://i.ibb.co/z8044J9/449646257-1014761163451801-5842622221926959076-n.jpg" alt="product image" />
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                   <p id="product-price" class="text-3xl font-bold mb-1 ml-1 leading-tight text-gray-900">₱550</p>
       
-                  <button type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-primary-300">
+                  <button type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
                     <svg class="-ms-2 me-2 h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
                     </svg>
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                   <p id="product-price" class="text-3xl font-bold mb-1 ml-1 leading-tight text-gray-900">₱750</p>
       
-                  <button type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-primary-300">
+                  <button type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
                     <svg class="-ms-2 me-2 h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
                     </svg>
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                   <p id="product-price" class="text-3xl font-bold mb-1 ml-1 leading-tight text-gray-900">₱350</p>
       
-                  <button type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-primary-300">
+                  <button type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
                     <svg class="-ms-2 me-2 h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
                     </svg>
@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                   <p id="product-price" class="text-3xl font-bold mb-1 ml-1 leading-tight text-gray-900">₱650</p>
       
-                  <button type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-primary-300">
+                  <button type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
                     <svg class="-ms-2 me-2 h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
                     </svg>
