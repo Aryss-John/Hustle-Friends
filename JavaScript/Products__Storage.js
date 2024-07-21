@@ -94,17 +94,6 @@ const products = [
         "image4": "https://i.ibb.co/JdVMTJW/433696764-938585221602299-3790173660479546003-n.jpg"
     },
 
-    {
-        "id": 9,
-        "productName": "HF Cozy Mesh Shorts",
-        "color": "Cream",
-        "type": "Tshirt",
-        "price": 350,
-        "image1": "https://i.ibb.co/jv8NKP6/449066503-1004540705006750-9192293920099988532-n.jpg",
-        "image2": "https://i.ibb.co/LYqJ5Z9/449066109-1004540715006749-2892819975220884522-n.jpg",
-        "image3": "https://i.ibb.co/h1zym1T/449144577-1004539271673560-8324347405767872681-n.jpg",
-        "image4": "https://i.ibb.co/jb2mYMw/449065811-1004540741673413-3228950967969981979-n.jpg"
-    },
   ];
   
   
