@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
 
       <!-- Cart Button -->
-      <a href="ShoppingCart.html">
+      <a href="Catalog.html">
         <button type="button" class="inline-flex items-center rounded-lg justify-center  px-2 py-2 lg:mx-3 hover:bg-zinc-800 text-sm font-medium leading-none text-stone-50 focus:bg-zinc-800">
           <span class="sr-only"> Cart </span>
           <!-- Cart Icon -->
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         <!-- Cart Button -->
-        <a href="ShoppingCart.html">
+        <a href="Catalog.html">
           <button id="myCartDropdownButton1" data-dropdown-toggle="myCartDropdown1" type="button" class="inline-flex items-center rounded-lg justify-center sm:px-3 py-2 lg:mx-3 hover:bg-zinc-800 text-sm font-medium leading-none text-stone-50 focus:bg-zinc-800">
             <span class="sr-only"> Cart </span>
             <!-- Cart Icon -->
