@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="https://www.facebook.com/hustlefriendstreetwear" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="Logo/HustleFriends-Logo__NoBG.png" class="h-16 mx-auto sm:h-20 md:h-20 lg:h-20" alt="Hustle Friends Logo" />
+                    <img src="/Logo/HustleFriends-Logo__NoBG.png" class="h-16 mx-auto sm:h-20 md:h-20 lg:h-20" alt="Hustle Friends Logo" />
                     </a>
                 </div>
-                <div class="grid grid-cols-4 sm:gap-6 sm:grid-cols-3">
+                <div class="grid grid-cols-2 sm:gap-6 sm:grid-cols-2">
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-stone-50 uppercase text-right">Resources</h2>
                         <ul class="text-gray-600 dark:text-gray-400 text-right">
@@ -31,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <a href="https://www.instagram.com/hustlefriendstreetwear/" class="hover:underline">Instagram</a>
                             </li>
                             <li class="mb-2">
-                                <a href="https://maps.app.goo.gl/ZMtSfdMs91XWV9x9A" class="hover:underline">Google Maps</a>
+                                <a href="Shopee.ph/hustlefriendstreetwear" class="hover:underline">Shopee</a>
                             </li>
                             <li class="mb-2">
-                                <a href="Shopee.ph/hustlefriendstreetwear" class="hover:underline">Shopee</a>
+                                <a href="https://maps.app.goo.gl/ZMtSfdMs91XWV9x9A" class="hover:underline">Google Maps</a>
                             </li>
                         </ul>
                     </div>
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
             <hr class="my-6 border-zinc-700 sm:mx-auto lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-zinc-500 sm:text-center">© 2022 <a href="https://flowbite.com" class="hover:underline">Hustle Friends™</a>. All Rights Reserved.
+                <span class="text-sm text-zinc-500 sm:text-center">© 2020 <a href="https://www.facebook.com/hustlefriendstreetwear/" class="hover:underline">Hustle Friends™</a>. All Rights Reserved.
                 </span>
                 <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                     <a href="https://www.facebook.com/hustlefriendstreetwear/" class="text-gray-500 hover:text-gray-90 ">
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
                    <img src="/Logo/HustleFriends-Logo__NoBG.png" class="h-16 mx-auto sm:h-20 md:h-20 lg:h-20" alt="Hustle Friends Logo" />
                    </a>
                </div>
-               <div class="grid grid-cols-4 sm:gap-6 sm:grid-cols-3">
+               <div class="grid grid-cols-2 sm:gap-6 sm:grid-cols-2">
                    <div>
                        <h2 class="mb-6 text-sm font-semibold text-stone-50 uppercase text-right">Resources</h2>
                        <ul class="text-gray-600 dark:text-gray-400 text-right">
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
            </div>
            <hr class="my-6 border-zinc-700 sm:mx-auto lg:my-8" />
            <div class="sm:flex sm:items-center sm:justify-between">
-               <span class="text-sm text-zinc-500 sm:text-center">© 2022 <a href="https://flowbite.com" class="hover:underline">Hustle Friends™</a>. All Rights Reserved.
+               <span class="text-sm text-zinc-500 sm:text-center">© 2020 <a href="https://www.facebook.com/hustlefriendstreetwear/" class="hover:underline">Hustle Friends™</a>. All Rights Reserved.
                </span>
                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                    <a href="https://www.facebook.com/hustlefriendstreetwear/" class="text-gray-500 hover:text-gray-90 ">

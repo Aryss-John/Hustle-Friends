@@ -98,7 +98,7 @@ const products = [
         "id": 9,
         "productName": "HF Cozy Mesh Shorts",
         "color": "Cream",
-        "type": "Shorts",
+        "type": "Tshirt",
         "price": 350,
         "image1": "https://i.ibb.co/jv8NKP6/449066503-1004540705006750-9192293920099988532-n.jpg",
         "image2": "https://i.ibb.co/LYqJ5Z9/449066109-1004540715006749-2892819975220884522-n.jpg",

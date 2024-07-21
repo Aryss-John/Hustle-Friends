@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const productContainer = document.getElementById('ProductContainer');
+    
 
     function addProductsToDOM(products) {
         productContainer.innerHTML = ''; // Clear existing products
@@ -59,34 +60,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function addToCart(product) {
         let cart = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
+        console.log('Cart before:', cart);
+    
         let existingProduct = cart.find(item => item.id === product.id);
-
+    
         if (existingProduct) {
             existingProduct.quantity += 1;
         } else {
             product.quantity = 1;
             cart.push(product);
         }
-
+    
         localStorage.setItem('ShoppingBag', JSON.stringify(cart));
+        console.log('Cart after:', JSON.parse(localStorage.getItem('ShoppingBag')));
+        addCartEventListeners();
     }
-
+    
     function addCartEventListeners() {
         document.querySelectorAll('.add-to-cart').forEach(button => {
             button.addEventListener('click', (event) => {
                 const productId = button.getAttribute('data-product-id');
                 const product = products.find(p => p.id === productId);
-
+    
                 if (product) {
                     addToCart(product);
                 }
-
+    
                 const modal = document.getElementById('successModal');
                 modal.classList.remove('hidden');
                 modal.classList.add('flex');
             });
         });
-
+    
+    
         document.querySelectorAll('.close-modal').forEach(button => {
             button.addEventListener('click', () => {
                 const modal = document.getElementById('successModal');
