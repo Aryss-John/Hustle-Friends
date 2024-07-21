@@ -121,11 +121,11 @@ document.addEventListener("DOMContentLoaded", function() {
             <span class="absolute bottom-0 right-0 w-0 h-1 bg-red-600 rounded transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
           </li>
           <li class="group relative">
-            <a href="About Page/about-us.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">About</a>
+            <a href="/About.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">About</a>
             <span class="absolute bottom-0 right-0 w-0 h-1 bg-red-600 rounded transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
           </li>
           <li class="group relative">
-            <a href="ContactUs.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">Contact Us</a>
+            <a href="/ContactUs.html" class="block my-1 py-2 pr-4 pl-3 text-stone-50 border-b border-zinc-700 rounded-md hover:bg-zinc-800 lg:hover:bg-transparent lg:border-0 lg:hover:text-stone-300 lg:p-0 md:border-0 md:hover:text-stone-300">Contact Us</a>
             <span class="absolute bottom-0 right-0 w-0 h-1 bg-red-600 rounded transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
           </li>        
         </ul>
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
   </nav>
 <!-- == NavBar End  == -->
 
-       `;
+ `;
       
    document.getElementById("NavBarContainer").innerHTML = content;
 });

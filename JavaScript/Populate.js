@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const productContainer = document.getElementById('ProductContainer');
-    const cartContainer = document.getElementById('CartContainer');
 
     function addProductsToDOM(products) {
         productContainer.innerHTML = ''; // Clear existing products
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span class="sr-only">Close modal</span>
                             </button>
                             <div class="w-12 h-12 rounded-full bg-green-500 p-2 flex items-center justify-center mx-auto mb-3.5 py-2">
-                                <svg aria-hidden="true" class="w-8 h-8 text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <svg aria-hidden="true" class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                                 <span class="sr-only">Success</span>
                             </div>
                             <p class="mb-4 text-lg font-semibold text-zinc-950 py-2 ">Successfully Added To Your Cart!</p>
@@ -56,6 +55,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             productContainer.insertAdjacentHTML('beforeend', productHTML);
         });
+    }
+
+    function addToCart(product) {
+        let cart = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
+        let existingProduct = cart.find(item => item.id === product.id);
+
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            product.quantity = 1;
+            cart.push(product);
+        }
+
+        localStorage.setItem('ShoppingBag', JSON.stringify(cart));
     }
 
     function addCartEventListeners() {
@@ -86,39 +99,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial load
     addProductsToDOM(products);
     addCartEventListeners();
-
-    // Filter Shorts
-    function ShowShorts() {
-        const shorts = products.filter(product => product.type === 'Shorts');
-        addProductsToDOM(shorts);
-        addCartEventListeners();
-    }
-
-    document.getElementById('ShowShortsButton').addEventListener('click', (event) => {
-        event.preventDefault();
-        ShowShorts();
-    });
-
-    // Filter TShirts
-    function ShowTees() {
-        const tees = products.filter(product => product.type === 'Tshirt');
-        addProductsToDOM(tees);
-        addCartEventListeners();
-    }
-
-    document.getElementById('ShowTshirtsButton').addEventListener('click', (event) => {
-        event.preventDefault();
-        ShowTees();
-    });
-
-    // Show All Products
-    function ShowAll() {
-        addProductsToDOM(products);
-        addCartEventListeners();
-    }
-
-    document.getElementById('ShowAllButton').addEventListener('click', (event) => {
-        event.preventDefault();
-        ShowAll();
-    });
 });

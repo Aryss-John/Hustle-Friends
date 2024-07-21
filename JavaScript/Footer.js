@@ -38,32 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-stone-50 uppercase text-right">Developers</h2>
-                        <ul class="text-gray-600 dark:text-gray-400 text-right">
-                            <li class="mb-4">
-                                <a href="https://www.facebook.com/KamilFAngeles" class="hover:underline ">Angeles</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="https://www.facebook.com/profile.php?id=100052153941707" class="hover:underline">Bautista</a>
-                            </li>
-                            <li class="mb-4">
-                            <a href="https://www.facebook.com/leianjoash.dcbernales" class="hover:underline ">Bernales</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="https://www.facebook.com/jhamima.condaraan" class="hover:underline">Condaraan</a>
-                            </li>
-                            <li class="mb-4">
-                            <a href="https://www.facebook.com/deguzman.0711" class="hover:underline">De Guzman</a>
-                            </li>
-                            <li class="mb-4">
-                            <a href="https://www.facebook.com/Carl.Martirez17" class="hover:underline">Martirez</a>
-                            </li>
-                            <li class="mb-4">
-                            <a href="https://www.facebook.com/AryssJohn" class="hover:underline">Tolentino</a>
-                            </li>
-                        </ul>
-                    </div>
+                   
                 </div>
             </div>
             <hr class="my-6 border-zinc-700 sm:mx-auto lg:my-8" />
@@ -128,32 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
                            </li>
                        </ul>
                    </div>
-                   <div>
-                       <h2 class="mb-6 text-sm font-semibold text-stone-50 uppercase text-right">Developers</h2>
-                       <ul class="text-gray-600 dark:text-gray-400 text-right">
-                           <li class="mb-4">
-                               <a href="https://www.facebook.com/KamilFAngeles" class="hover:underline ">Angeles</a>
-                           </li>
-                           <li class="mb-4">
-                               <a href="https://www.facebook.com/profile.php?id=100052153941707" class="hover:underline">Bautista</a>
-                           </li>
-                           <li class="mb-4">
-                           <a href="https://www.facebook.com/leianjoash.dcbernales" class="hover:underline ">Bernales</a>
-                           </li>
-                           <li class="mb-4">
-                               <a href="https://www.facebook.com/jhamima.condaraan" class="hover:underline">Condaraan</a>
-                           </li>
-                           <li class="mb-4">
-                           <a href="https://www.facebook.com/deguzman.0711" class="hover:underline">De Guzman</a>
-                           </li>
-                           <li class="mb-4">
-                           <a href="https://www.facebook.com/Carl.Martirez17" class="hover:underline">Martirez</a>
-                           </li>
-                           <li class="mb-4">
-                           <a href="https://www.facebook.com/AryssJohn" class="hover:underline">Tolentino</a>
-                           </li>
-                       </ul>
-                   </div>
+                  
                </div>
            </div>
            <hr class="my-6 border-zinc-700 sm:mx-auto lg:my-8" />

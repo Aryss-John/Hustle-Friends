@@ -55,7 +55,9 @@ const products = [
         "type": "Tshirt",
         "price": 550,
         "image1": "https://i.ibb.co/VCtqfZr/434973322-943682161092605-4917249361493216466-n.jpg",
-        "image2": "https://i.ibb.co/tDH7TZR/434945612-943682141092607-7856961942077110216-n.jpg"
+        "image2": "https://i.ibb.co/tDH7TZR/434945612-943682141092607-7856961942077110216-n.jpg",
+        "image3": "https://i.ibb.co/T1ZTQ9t/434925696-943682051092616-6420573369532003176-n.jpg",
+        "image4": "https://i.ibb.co/hswqLWd/434950952-943682067759281-3871326784092536118-n.jpg"
     },
 
     {
