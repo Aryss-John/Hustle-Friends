@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const productHTML = `
             <div class="group relative border border-zinc-200 p-3 rounded-lg" id="${product.id}">
                 <div class="aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80">
-                    <a href="${product.productName}.html">
+                    <a href="Product Pages/${product.productName}.html">
                         <img src="${product.image1}" class="h-full w-full object-cover object-center lg:h-full lg:w-full transition duration-200 group-hover:scale-125" alt="${product.productName}">
                     </a>
                 </div>
@@ -66,7 +66,7 @@ function ShowShorts() {
             const productHTML = `
             <div class="group relative" id="${product.id}">
                 <div class="aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80">
-                    <a href="${product.productName}.html">
+                    <a href="Product Pages/${product.productName}.html">
                         <img src="${product.image1}" class="h-full w-full object-cover object-center lg:h-full lg:w-full transition duration-200 group-hover:scale-125" alt="${product.productName}">
                     </a>
                 </div>
@@ -111,7 +111,7 @@ function ShowTees() {
             const productHTML = `
             <div class="group relative" id="${product.id}">
                 <div class="aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80">
-                    <a href="${product.productName}.html">
+                    <a href="Product Pages/${product.productName}.html">
                         <img src="${product.image1}" class="h-full w-full object-cover object-center lg:h-full lg:w-full transition duration-200 group-hover:scale-125" alt="${product.productName}">
                     </a>
                 </div>
