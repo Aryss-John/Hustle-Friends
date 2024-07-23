@@ -76,23 +76,10 @@
       <script src="JavaScript/Products__Storage.js"></script>
       <script src="JavaScript/Navigation Bar.js"></script>
       <script src="JavaScript/Footer.js"></script> 
+
   <script>
 
-    document.addEventListener('DOMContentLoaded', () => {
-    const cartContainer = document.getElementById('CartContainer');
-
-    function renderCartItems() {
-        const cart = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
-        cartContainer.innerHTML = '';
-
-        cart.forEach(item => {
-            cartContainer.insertAdjacentHTML('beforeend', item.html);
-        });
-    }
-
-    renderCartItems();
-});
-
   </script>
+  
   </body>
   </html>
