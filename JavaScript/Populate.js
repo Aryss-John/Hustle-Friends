@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     products.forEach(product => {
         const productHTML = `
-            <div class="bg-white shadow-lg rounded-lg border-b-4 border-red-600 overflow-hidden transform duration-300 hover:scale-105 hover:shadow-2xl" id="${product.type}">
-                <div class="product-image w-full">
+            <div class="bg-white shadow-lg rounded-lg  border-b-4 border-red-600 overflow-hidden transform duration-300 hover:scale-105 hover:shadow-2xl" id="${product.type}">
+                <div class="product-image ">
                     <a href="Product Pages/${product.productName}.html">
                         <img class="object-cover default-image rounded-t-xl h-96 w-screen" src="${product.image1}" alt="Product Image">
                         <img class="object-cover hover-image rounded-t-xl h-96 w-screen" src="${product.image2}" alt="Product Image Hover">
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
 
                 <div class="flex flex-row">
-                    <button onclick="addToCart('${product.productName}', ${product.price})" class="w-1/3 flex items-center justify-center bg-red-600 text-white py-2 hover:bg-red-500 transition-all">
+                    <button onclick="addToCart('${product.productName}', ${product.price},'${product.image1}')" class="w-1/3 flex items-center justify-center bg-red-600 text-white py-2 hover:bg-red-500 transition-all">
                         <svg class="h-7 w-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
                         </svg>
@@ -36,7 +36,3 @@ document.addEventListener('DOMContentLoaded', () => {
         productContainer.insertAdjacentHTML('beforeend', productHTML);
     });
 });
-
-function addToCart(productName, price) {
-    console.log(`Added ${productName} to cart at ₱${price}`);
-}

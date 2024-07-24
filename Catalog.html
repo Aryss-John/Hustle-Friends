@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalog</title>
@@ -12,58 +13,75 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">   
 
 </head>
 <body class="overflow-x-hidden">
 
-<!-- NavBar Start-->
+<!-- == NavBar Start == -->
 <section id="NavBarContainer">
 
 </section>
-<!-- NavBar End -->
+<!-- == NavBar End == -->
 
 <!-- == Product Start == -->
-<section class="bg-stone-50 pt-24 py-8 antialiased md:pt-28 sm:pt-24">
+<section class="bg-stone-50 pt-28 py-8 antialiased md:pt-32 sm:pt-28">
     <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">   
-      <!-- Heading & Filters -->
+
+      <!-- Heading -->
       <div class="py-8 max-w-screen-xl text-center">
          <h1 class="mb-4 text-5xl font-extrabold tracking-tight leading-none text-zinc-900">Browse Our Catalog</h1>
         <p class="my-4 text-lg font-normal text-stone-700 lg:text-xl whitespace-pre-line">Each piece is a canvas of <span class="underline decoration-red-600 italic">creativity</span>.
                    Let the world know you're part of the crew that turns the <span class="font-bold text-stone-950">grind into glory.</span></p>     
+
+         <!-- Filter -->
+         <div>                    
+            <button id="filterDropdownButton1" data-dropdown-toggle="dropdownFilter1" type="button"  class="flex w-full items-center justify-center rounded-xl border-b-4 mx-auto mt-5 border-red-600 bg-white px-6 py-2.5 text-sm font-medium text-gray-900 hover:bg-stone-100 hover:text-zinc-900 focus:z-10 focus:outline-none focus:ring-4 focus:ring-red-600 sm:w-auto transition-all delay-10 duration-50 border-b-4 border-red-600 hover:border-2 hover:scale-105">
+              <svg class="-ms-0.5 me-2 h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18.796 4H5.204a1 1 0 0 0-.753 1.659l5.302 6.058a1 1 0 0 1 .247.659v4.874a.5.5 0 0 0 .2.4l3 2.25a.5.5 0 0 0 .8-.4v-7.124a1 1 0 0 1 .247-.659l5.302-6.059c.566-.646.106-1.658-.753-1.658Z" />
+              </svg>
+              Filter
+              <svg class="-me-0.5 ms-2 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7" />
+              </svg>
+            </button>
+            <div id="dropdownFilter1" class="z-50 hidden w-80 divide-y divide-gray-100 rounded-lg bg-stone-50 shadow sm:w-60 border border-zinc-950 " >
+              <ul class="p-2 mt-1 text-left text-sm font-medium text-zinc-950" aria-labelledby="fitlerDropdownButton">
+
+                <li>
+                    <a href="#" id="ShowTshirtsButton" class="flex items-center px-4 py-2 hover:bg-red-600 hover:text-stone-50 rounded-md">
+                        <i class="fa-solid fa-t-shirt mr-2" alt="T-Shirts"></i>
+                        T-Shirts
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="ShowShortsButton" class="flex items-center px-4 py-2 hover:bg-red-600 hover:text-stone-50 rounded-md">
+                        <img src="https://img.icons8.com/?size=100&id=10179&format=png&color=000000" class="h-4 w-4 mr-2" alt="Pants Icon">
+                        Bottoms
+                    </a>
+                </li>                    
+
+              </ul>
+
+              <div class="p-2">                                                                  
+                <a href="#" id="ShowAllProducts" class="block px-4 py-2 text-sm font-bold border border-zinc-300 text-zinc-950 hover:bg-red-600 hover:text-stone-50 rounded-md">All Products</a>
+              </div>
+              
       </div>
                 
     </div>
 </div>
 
-<div class="container mx-auto">
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4" id="ProductContainer">    
+<div class="container mx-auto pb-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4" id="ProductContainer">    
             <!-- Populated with Load__Featured.js --> 
-        </div>
+       
   </div>
 </section>
 <!-- == Product End == -->
 
-<hr>
 
-<!-- Cart Start -->
-<div class="px-16 mb-16">
-  <h2 class="text-2xl font-bold mt-10 mb-6">Shopping Cart</h2>
-  <div id="cart" class="bg-white p-4 rounded-lg shadow-md">
-      <p class="text-gray-700 mb-10">No items in cart.</p>
-  </div>
-  <div id="checkout-container" class="hidden text-center mt-4">
-    <a href="Checkout.html">
-      <button class="inline-block rounded-lg bg-red-600 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-red-500 transition duration-100 hover:bg-red-500 focus-visible:ring active:bg-red-700 md:text-base">
-          Check out
-      </button>
-    </a>
-  </div>
-</div>
-<!-- Cart End -->
-
-<section id="FooterContainer">
+<section id="FooterContainer" >
   
 </section>
 
@@ -75,118 +93,228 @@
     <!-- Local JavaScript -->
     <script src="JavaScript/Products__Storage.js"></script>
     <script src="JavaScript/Navigation Bar.js"></script>
-    <script src="JavaScript/Populate.js"></script>
     <script src="JavaScript/Footer.js"></script> 
+    <script src="JavaScript/Populate.js"></script>
 
     <script>
-    // Load cart from localStorage when page loads
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        document.addEventListener('DOMContentLoaded', () => {
+          const productContainer = document.getElementById('ProductContainer');
+             // Update cart badge and dropdown on load
+            updateCartBadge();
+            updateCartDropdown();
+        });
+      
+    function addToCart(productName, price, imageURL) {
+        const cartItems = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
+        const existingItem = cartItems.find(item => item.productName === productName);
 
-function saveCart() {
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cartItems.push({ productName, price, quantity: 1, imageURL });
+        }
 
-function addToCart(productName, productPrice) {
-    const existingItem = cart.find(item => item.name === productName);
+        localStorage.setItem('ShoppingBag', JSON.stringify(cartItems));
+        updateCartBadge();
+        updateCartDropdown();
+        animateAddToCart();
+        showConfirmationModal();
+    }
 
-    if (existingItem) {
-        existingItem.quantity += 1;
+
+    function removeFromCart(productName) {
+        let cartItems = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
+        const itemIndex = cartItems.findIndex(item => item.productName === productName);
+
+        if (itemIndex !== -1) {
+            if (cartItems[itemIndex].quantity > 1) {
+                cartItems[itemIndex].quantity -= 1;
+            } else {
+                cartItems.splice(itemIndex, 1);
+            }
+        }
+
+        localStorage.setItem('ShoppingBag', JSON.stringify(cartItems));
+        updateCartBadge();
+        updateCartDropdown();
+    }   
+
+    function updateCartBadge() {
+        const cartItems = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
+        const itemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
+        document.getElementById('cartItemCount').textContent = itemCount;
+    }
+    function updateCartDropdown() {
+    const cartItems = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
+    const cartItemsList = document.getElementById('cartItemsList');
+    const cartTotalPrice = document.getElementById('cartTotalPrice');
+    cartItemsList.innerHTML = '';
+
+    if (cartItems.length === 0) {
+        const noItems = document.createElement('li');
+        noItems.className = 'px-4 py-2 text-sm';
+        noItems.textContent = 'No items in cart';
+        cartItemsList.appendChild(noItems);
+        cartTotalPrice.textContent = '0';
     } else {
-        const cartItem = { name: productName, price: productPrice, quantity: 1 };
-        cart.push(cartItem);
+        let totalPrice = 0;
+        cartItems.forEach(item => {
+            totalPrice += item.price * item.quantity;
+            const li = document.createElement('li');
+            li.className = 'px-4 py-2 text-sm flex items-center';
+            li.innerHTML = `
+                <img src="${item.imageURL}" alt="${item.productName}" class="w-16 h-16 object-cover mr-2">
+                <div class="flex-1 flex justify-between items-center">
+                    <span>${item.productName}</span>
+                    <div class="flex items-center">
+                        <button onclick="decrementQuantity('${item.productName}')" class="text-red-600 hover:text-red-800 transition-all mx-2">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="incrementQuantity('${item.productName}')" class="text-green-600 hover:text-green-800 transition-all mx-2">+</button>
+                        <span class="ml-2">₱${item.price}</span>
+                        <button onclick="removeFromCart('${item.productName}')" class="ml-2 text-red-600 hover:text-red-800 transition-all">Remove</button>
+                    </div>
+                </div>
+            `;
+            cartItemsList.appendChild(li);
+        });
+        cartTotalPrice.textContent = totalPrice.toFixed(2);
     }
-
-    saveCart();
-    renderCart();
-    showModal(); // Show the modal after adding to cart
 }
 
-function removeFromCart(productName) {
-    cart = cart.filter(item => item.name !== productName);
-    saveCart();
-    renderCart();
-}
 
-function renderCart() {
-    const cartContainer = document.getElementById('cart');
-    const checkoutContainer = document.getElementById('checkout-container');
-    cartContainer.innerHTML = '';
 
-    if (cart.length === 0) {
-        cartContainer.innerHTML = '<p class="text-gray-700">No items in cart.</p>';
-        checkoutContainer.classList.add('hidden');
-        return;
+
+    function incrementQuantity(productName) {
+        const cartItems = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
+        const existingItem = cartItems.find(item => item.productName === productName);
+
+        if (existingItem) {
+            existingItem.quantity += 1;
+        }
+
+        localStorage.setItem('ShoppingBag', JSON.stringify(cartItems));
+        updateCartBadge();
+        updateCartDropdown();
     }
 
-    cart.forEach(item => {
-        const itemDiv = document.createElement('div');
-        itemDiv.className = 'flex justify-between mb-2 items-center';
-        itemDiv.innerHTML = `
-            <span>${item.name}</span>
-            <span>₱${item.price.toFixed(2)} x ${item.quantity}</span>
-            <button onclick="removeFromCart('${item.name}')" class="ml-4 text-red-500">Remove</button>
-        `;
-        cartContainer.appendChild(itemDiv);
+    function decrementQuantity(productName) {
+        const cartItems = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
+        const existingItem = cartItems.find(item => item.productName === productName);
+
+        if (existingItem && existingItem.quantity > 1) {
+            existingItem.quantity -= 1;
+        } else {
+            removeFromCart(productName);
+        }
+
+        localStorage.setItem('ShoppingBag', JSON.stringify(cartItems));
+        updateCartBadge();
+        updateCartDropdown();
+    }
+
+    function animateAddToCart() {
+        const cartButton = document.getElementById('myCartDropdownButton1');
+        cartButton.classList.add('animate-bounce');
+        setTimeout(() => {
+            cartButton.classList.remove('animate-bounce');
+        }, 500);
+    }
+
+    function showConfirmationModal() {
+        const confirmationModal = document.getElementById('confirmationModal');
+        confirmationModal.classList.remove('hidden');
+
+        setTimeout(() => {
+            confirmationModal.classList.add('hidden');
+        }, 2000);
+    }
+
+    function closeModal() {
+        document.getElementById('confirmationModal').classList.add('hidden');
+    }
+
+    // Close the dropdown if clicked outside
+        window.addEventListener('click', (e) => {
+        const cartButton = document.getElementById('myCartDropdownButton1');
+        const cartDropdown = document.getElementById('myCartDropdown1');
+        if (!cartButton.contains(e.target) && !cartDropdown.contains(e.target)) {
+            cartDropdown.classList.add('hidden');
+        }
     });
 
-    const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-    const subtotal = total; // Or however you want to calculate it
+    </script>
+      
 
-    const totalDiv = document.createElement('div');
-    totalDiv.className = 'flex justify-between mt-4 pt-4 border-t';
-    totalDiv.innerHTML = `<strong>Total</strong><strong>₱${total.toFixed(2)}</strong>`;
-    cartContainer.appendChild(totalDiv);
+    <!-- Product Image Hver Animation  -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const productImages = document.querySelectorAll('.product-image');
+        productImages.forEach(productImage => {
+            const defaultImage = productImage.querySelector('.default-image');
+            const hoverImage = productImage.querySelector('.hover-image');
 
-    // Store prices in localStorage
-    localStorage.setItem('totalPrice', total.toFixed(2));
-    localStorage.setItem('subtotalPrice', subtotal.toFixed(2));
+            productImage.style.position = 'relative';
+            defaultImage.style.transition = 'opacity 0.5s ease-in-out';
+            hoverImage.style.transition = 'opacity 0.5s ease-in-out';
+            hoverImage.style.position = 'absolute';
+            hoverImage.style.top = '0';
+            hoverImage.style.left = '0';
+            hoverImage.style.opacity = '0';
 
-    checkoutContainer.classList.remove('hidden');
-}
+            productImage.addEventListener('mouseover', () => {
+                defaultImage.style.opacity = '0';
+                hoverImage.style.opacity = '1';
+            });
 
-function showModal() {
-    document.getElementById('successModal').classList.remove('hidden');
-}
+            productImage.addEventListener('mouseout', () => {
+                defaultImage.style.opacity = '1';
+                hoverImage.style.opacity = '0';
+            });
+        });
+    });
+    </script>
 
-function hideModal() {
-    document.getElementById('successModal').classList.add('hidden');
-}
-
-// Close modal when the close button is clicked
-document.getElementById('closeModal').addEventListener('click', hideModal);
-
-// Render cart on page load
-renderCart();
-
-  </script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-      const productImages = document.querySelectorAll('.product-image');
-      productImages.forEach(productImage => {
-          const defaultImage = productImage.querySelector('.default-image');
-          const hoverImage = productImage.querySelector('.hover-image');
-
-          productImage.style.position = 'relative';
-          defaultImage.style.transition = 'opacity 0.5s ease-in-out';
-          hoverImage.style.transition = 'opacity 0.5s ease-in-out';
-          hoverImage.style.position = 'absolute';
-          hoverImage.style.top = '0';
-          hoverImage.style.left = '0';
-          hoverImage.style.opacity = '0';
-
-          productImage.addEventListener('mouseover', () => {
-              defaultImage.style.opacity = '0';
-              hoverImage.style.opacity = '1';
-          });
-
-          productImage.addEventListener('mouseout', () => {
-              defaultImage.style.opacity = '1';
-              hoverImage.style.opacity = '0';
-          });
-      });
-  });
-</script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const cartButton = document.getElementById('myCartDropdownButton1');
+        const cartDropdown = document.getElementById('myCartDropdown1');
+        const cartItemsList = document.getElementById('cartItemsList');
+    
+        cartButton.addEventListener('click', () => {
+            cartDropdown.classList.toggle('hidden');
+            updateCartDropdown();
+        });
+    
+        function updateCartDropdown() {
+            const cartItems = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
+            cartItemsList.innerHTML = '';
+    
+            if (cartItems.length === 0) {
+            const noItems = document.createElement('li');
+            noItems.className = 'px-4 py-2 text-sm';
+            noItems.textContent = 'No items in cart';
+            cartItemsList.appendChild(noItems);
+            } else {
+            cartItems.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'px-4 py-2 text-sm flex justify-between items-center';
+                li.innerHTML = `
+                <span>${item.productName}</span>
+                <span>${item.quantity} x ₱${item.price}</span>
+                `;
+                cartItemsList.appendChild(li);
+            });
+            }
+        }
+    
+        // Close the dropdown if clicked outside
+        window.addEventListener('click', (e) => {
+            if (!cartButton.contains(e.target) && !cartDropdown.contains(e.target)) {
+            cartDropdown.classList.add('hidden');
+            }
+        });
+        });
+    </script>
+    
 </body>
 </html>
