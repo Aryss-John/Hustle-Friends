@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
+  
     var content = `
 
     <!-- ===== -->            
             <div class="rounded-lg border border-zinc-300 bg-neutral-50 p-6 shadow-md transform duration-300 hover:scale-105 hover:shadow-2xl" id="Featured">
               <div class="h-56 w-full">
                 <a href="#" class="relative flex h-60 overflow-hidden rounded-md">
-                    <img id="product-img" class="peer absolute top-0 right-0 h-full w-full object-cover" src="https://i.ibb.co/z8044J9/449646257-1014761163451801-5842622221926959076-n.jpg" alt="product image" />
+                    <img id="image1" class="peer absolute top-0 right-0 h-full w-full object-cover" src="https://i.ibb.co/z8044J9/449646257-1014761163451801-5842622221926959076-n.jpg" alt="product image" />
                     <img class="peer absolute top-0 -right-96 h-full w-full object-cover transition-all delay-100 duration-1000 hover:right-0 peer-hover:right-0" src="https://i.ibb.co/686JNQX/448204381-993038962823591-6961833472496118905-n.jpg" alt="product image" />
                     <span class="absolute top-0 left-0 m-2 rounded-full bg-red-600 px-2 text-center text-sm font-medium text-white">Best Seller!</span>
                 </a>

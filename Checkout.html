@@ -11,11 +11,23 @@
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.5s ease-out;
+      }
+
+      .slide-up {
+        animation: fadeIn 0.5s ease-out;
+      }
+    </style>
 
 </head>
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden bg-stone-50">
 
 <section id="NavBarContainer">
 
@@ -24,47 +36,72 @@
 </section>
 
 <!-- == Checkout Start == -->
-<section class="antialiased px-4 py-8">
+<section class="px-4 py-8">
 
-  <section class="py-8 antialiased md:py-16">
+  <section class="py-28 pb-96 md:py-28">
       <form action="#" class="mx-auto max-w-screen-xl px-4 2xl:px-0">
-      
-        <div class="mt-6 sm:mt-8 lg:flex lg:items-start lg:gap-12 xl:gap-16">
+        <ol class="items-center flex w-full max-w-2xl text-center text-sm font-medium text-red-600 sm:text-base">
+          <li class="after:border-1 flex items-center text-primary-700 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-red-600 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
+            <span class="flex items-center after:mx-2 after:text-gray-200 after:content-['/'] sm:after:hidden">
+              <svg class="me-2 h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              Cart
+            </span>
+          </li>
+    
+          <li class="after:border-1 flex items-center text-zinc-800 after:mx-6 after:hidden after:h-1 after:w-full after:border-b after:border-zinc-800 sm:after:inline-block sm:after:content-[''] md:w-full xl:after:mx-10">
+            <span class="flex items-center after:mx-2 after:text-red-600 after:content-['/'] sm:after:hidden">
+              <svg class="me-2 h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              Checkout
+            </span>
+          </li>
+    
+          <li class="flex shrink-0 items-center text-zinc-400">
+            <svg class="me-2 h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+            Order Confirmation
+          </li>
+        </ol>
+
+        <div class=" mt-8 lg:flex lg:items-start lg:gap-12 xl:gap-16">
           <div class="min-w-0 flex-1 space-y-8">
             <div class="space-y-4">
-              <h2 class="text-2xl font-extrabold text-stone-50">Checkout</h2>
+              <h2 class="text-3xl font-bold text-zinc-950">Checkout</h2>
     
-              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 border-t-2 border-zinc-600 pt-4">
                 <div>
-                  <label for="your_name" class="mb-2 block text-sm font-medium text-stone-50"> Full name* </label>
+                  <label for="your_name" class="mb-2 block text-sm font-medium text-zinc-950"> Full name* </label>
                   <input type="text" id="your_name" class="block w-full rounded-lg border border-zinc-600 bg-zinc-900 p-2.5 text-sm text-stone-50 focus:border-zinc-500 focus:ring-zinc-400" placeholder="Juan Dela Cruz" required />
                 </div>
     
                 <div>
-                  <label for="your_email" class="mb-2 block text-sm font-medium text-stone-50 "> Your email* </label>
+                  <label for="your_email" class="mb-2 block text-sm font-medium text-zinc-950 "> Your email* </label>
                   <input type="email" id="your_email" class="block w-full rounded-lg border border-zinc-600 bg-zinc-900 p-2.5 text-sm text-stone-50 focus:border-zinc-500 focus:ring-zinc-400" placeholder="email@gmail.com" required />
                 </div>    
                 
     
                 <div>
                   <div class="mb-2 flex items-center gap-2">
-                      <label for="select-city-input-3" class="block text-sm font-medium text-stone-50">City*</label>
+                      <label for="select-city-input-3" class="block text-sm font-medium text-zinc-950">City*</label>
                   </div>
                   <select id="select-city-input-3" class="block w-full rounded-lg border border-zinc-600 bg-zinc-900 p-2.5 text-sm text-gray-400 focus:border-zinc-500 focus:ring-zinc-400" required>
                       <option value="" disabled selected>Select a city</option>
                       <option value="Manila">Manila</option>
+                      <option value="Makati">Makati</option>
+                      <option value="Taguig">Taguig</option>
                       <option value="Quezon City">Quezon City</option>
                       <option value="Mandaluyong">Mandaluyong</option>
-                      <option value="Makati">Makati</option>
-                      <option value="Quezon City">Quezon City</option>
-                      <option value="Taguig">Taguig</option>
                       <option value="Valenzuela">Valenzuela</option>
                   </select>
               </div>
               
     
               <div>
-                  <label for="phone-input-3" class="mb-2 block text-sm font-medium text-stone-50"> Phone Number* </label>
+                  <label for="phone-input-3" class="mb-2 block text-sm font-medium text-zinc-950"> Phone Number* </label>
                   <div class="flex items-center">
                     <button class="z-10 inline-flex shrink-0 items-center rounded-s-lg border border-zinc-600 bg-zinc-900 px-4 py-2.5 text-right text-sm font-medium text-stone-50 focus:border-zinc-500 focus:ring-zinc-400" type="button">
                       <a href="https://commons.wikimedia.org/wiki/File:Flag_of_the_Philippines.svg">
@@ -88,32 +125,27 @@
                   </div>
                 </div>
 
-              <div>
-                  <label for="message" class="block mb-2 text-sm font-medium text-stone-50">Your Address*</label>
-                  <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-400 rounded-lg border border-zinc-600 bg-zinc-900 focus:border-zinc-500 focus:ring-zinc-400" placeholder="Write your complete address here..." required></textarea>
-              </div>
-
               </div>
             </div>
     
             <div class="space-y-4">
-              <h3 class="text-xl font-semibold text-stone-50 ">Payment</h3>
+              <h3 class="text-xl font-semibold text-zinc-950 border-b-2 border-zinc-600 pb-4">Payment Method</h3>
     
-              <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-sm hover:shadow-stone-50">
+              <div class="grid grid-cols-1 gap-4 md:grid-cols-3 ">
+                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-md hover:shadow-red-600">
                   <div class="flex items-start">
                     <div class="flex h-5 items-center">
                       <input id="dhl" aria-describedby="dhl-text" type="radio" name="payment-method" value="" class="h-4 w-4 border-red-500 bg-zinc-900 text-red-600 focus:ring-2 focus:ring-red-600" checked/>
                     </div>
     
                     <div class="ms-4 text-sm">
-                      <label for="dhl" class="font-medium leading-none text-stone-50"> Credit Card </label>
-                      <p id="dhl-text" class="mt-1 text-xs font-normal text-stone-200/50 ">Get it at your nearest Hustle Friends Store!</p>
+                      <label for="CreditCard" class="font-medium leading-none text-stone-50"> Credit Card </label>
+                      <p id="dhl-text" class="mt-1 text-xs font-normal text-stone-200/50 ">Provide your Credit Card details for checkout</p>
                     </div>
                   </div>
                 </div>
     
-                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-sm hover:shadow-stone-50">
+                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-md hover:shadow-red-600">
                   <div class="flex items-start">
                     <div class="flex h-5 items-center">
                       <input id="fedex" aria-describedby="fedex-text" type="radio" name="payment-method" value="" class="h-4 w-4 border-red-500 bg-zinc-900 text-red-600 focus:ring-2 focus:ring-red-600" />
@@ -121,32 +153,128 @@
     
                     <div class="ms-4 text-sm">
                       <label for="fedex" class="font-medium leading-none text-stone-50"> Cash On Delivery </label>
-                      <p id="fedex-text" class="mt-1 text-xs font-normal text-stone-200/50">Proceed to Shopee for checkout and delivery</p>
+                      <p id="fedex-text" class="mt-1 text-xs font-normal text-stone-200/50">Pay for your items when they are delivered</p>
                     </div>
                   </div>
                 </div>
     
-                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-sm hover:shadow-stone-50">
+                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-md hover:shadow-red-600">
                   <div class="flex items-start">
                     <div class="flex h-5 items-center">
                       <input id="express" aria-describedby="express-text" type="radio" name="payment-method" value="" class="h-4 w-4 border-red-500 bg-zinc-900 text-red-600 focus:ring-2 focus:ring-red-600" />
                     </div>
     
                     <div class="ms-4 text-sm ">
-                      <label for="express" class="font-medium leading-none text-stone-50 "> Debit Card </label>
-                      <p id="express-text" class="mt-1 text-xs font-normal text-stone-200/50 ">Get it as soon as possible with J&T Express</p>
+                      <label for="CreditCard" class="font-medium leading-none text-stone-50 "> Debit Card </label>
+                      <p id="express-text" class="mt-1 text-xs font-normal text-stone-200/50 ">Provide your Debit Card details for checkout</p>
                     </div>
                   </div>
                 </div>
+
+                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-md hover:shadow-red-600">
+                  <div class="flex items-start">
+                    <div class="flex h-5 items-center">
+                      <input id="express" aria-describedby="express-text" type="radio" name="payment-method" value="" class="h-4 w-4 border-red-500 bg-zinc-900 text-red-600 focus:ring-2 focus:ring-red-600" />
+                    </div>
+    
+                    <div class="ms-4 text-sm ">
+                      <label for="Gcash" class="font-medium leading-none text-stone-50 "> Gcash </label>
+                      <p id="express-text" class="mt-1 text-xs font-normal text-stone-200/50 ">Provide your Debit Card details for checkout</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-md hover:shadow-red-600">
+                  <div class="flex items-start">
+                    <div class="flex h-5 items-center">
+                      <input id="express" aria-describedby="express-text" type="radio" name="payment-method" value="" class="h-4 w-4 border-red-500 bg-zinc-900 text-red-600 focus:ring-2 focus:ring-red-600" />
+                    </div>
+    
+                    <div class="ms-4 text-sm ">
+                      <label for="PayPal" class="font-medium leading-none text-stone-50 "> PayPal </label>
+                      <p id="express-text" class="mt-1 text-xs font-normal text-stone-200/50 ">Provide your Debit Card details for checkout</p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-    
+
+
+          <!-- Credit Card and Debit Card Form -->
+            <div id="CreditCard" class="border-2 border-zinc-600  p-8 pt-10 rounded-lg">
+              <form action="#" class="w-full rounded-lg border-2 border-zinc-600 pb-12 bg-white shadow-sm sm:p-6 lg:max-w-xl lg:p-8">
+                <div class="mb-6 grid grid-cols-2 gap-4">
+                  <div class="col-span-2 sm:col-span-1">
+                    <label for="full_name" class="mb-2 block text-sm font-medium text-gray-900"> Full name (as displayed on card)* </label>
+                    <input type="text" id="full_name" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="Bonnie Green" required />
+                  </div>
+      
+                  <div class="col-span-2 sm:col-span-1">
+                    <label for="card-number-input" class="mb-2 block text-sm font-medium text-gray-900"> Card number* </label>
+                    <input type="number" id="card-number-input" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="^4[0-9]{12}(?:[0-9]{3})?$" required />
+                  </div>
+      
+                  <div>
+                    <label for="card-expiration-input" class="mb-2 block text-sm font-medium text-gray-900">Card expiration* </label>
+                    <div class="relative">
+                      <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5">
+                        <svg class="h-4 w-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                          <path
+                            fill-rule="evenodd"
+                            d="M5 5a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1 2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a2 2 0 0 1 2-2ZM3 19v-7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6.01-6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-10 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <input datepicker datepicker-format="mm/yy" id="card-expiration-input" type="text" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 ps-9 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="12/23" required />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="cvv-input" class="mb-2 flex items-center gap-1 text-sm font-medium text-gray-900">
+                      CVV*
+                      <button data-tooltip-target="cvv-desc" data-tooltip-trigger="hover" class="text-gray-400 hover:text-gray-900">
+                        <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                          <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm9.408-5.5a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM10 10a1 1 0 1 0 0 2h1v3h-1a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-1v-4a1 1 0 0 0-1-1h-2Z" clip-rule="evenodd" />
+                        </svg>
+                      </button>
+                      <div id="cvv-desc" role="tooltip" class="tooltip invisible absolute z-10 inline-block rounded-lg bg-zinc-800 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300">
+                        The last 3 digits on back of card
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                      </div>
+                    </label>
+                    <input type="number" id="cvv-input" aria-describedby="helper-text-explanation" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="•••" required />
+                  </div>
+                </div>      
+              </form>
+            </div>
+
+            <!-- COD Form -->
+            <div id="CashonDelivery">
+
+            </div>
+
+            <!-- Gcash Button -->
+            <div id="Gcash">
+              <p class="text-center text-md font-regular tracking-tight mb-4">After clicking "Pay with Gcash", you will be redirected to Gcash to complete your purchase securely.</p>
+              <a href="https://m.gcash.com/gcashapp/gcash-promotion-web/2.0.0/index.html#/?referralCode=hWlkIm1">
+                <button type="button" class="flex w-full items-center justify-center rounded-lg bg-blue-300 px-5 py-4 text-lg font-semibold text-stone-50 focus:outline-none focus:ring-4 focus:ring-blue-400 transition-all delay-10 duration-50 border-b-4 border-stone-50 hover:border-2 hover:scale-105 "><img class="h-6 mr-3" src="https://upload.wikimedia.org/wikipedia/commons/5/52/GCash_logo.svg" alt="Gcash Logo"> Pay with Gcash</button>
+              </a>
+            </div>
+
+            <!-- PayPal Button -->
+            <div id="PayPal">
+              <p class="text-center text-md font-regular tracking-tight mb-4">After clicking "Pay with PayPal", you will be redirected to PayPal to complete your purchase securely.</p>
+                <a href="https://www.paypal.com/signin">
+                  <button type="button" class="flex w-full items-center justify-center rounded-lg bg-blue-700 px-5 py-4 text-lg font-semibold text-white focus:outline-none focus:ring-4 focus:ring-blue-400 transition-all delay-10 duration-50 border-b-4 border-stone-50 hover:border-2 hover:scale-105 "><img class="h-8 mr-3" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/brand-logos/paypal.svg" alt=""> Pay with PayPal</button>
+                </a>
+            </div>
     
             <div class="space-y-4">
-              <h3 class="text-xl font-semibold text-stone-50 ">Delivery Methods</h3>
+              <h3 class="text-xl font-semibold text-zinc-950 border-b-2 border-zinc-600 pb-4">Delivery Methods</h3>
     
               <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-sm hover:shadow-stone-50">
+                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-md hover:shadow-red-600">
                   <div class="flex items-start">
                     <div class="flex h-5 items-center">
                       <input id="dhl" aria-describedby="dhl-text" type="radio" name="delivery-method" value="" class="h-4 w-4 border-red-500 bg-zinc-900 text-red-600 focus:ring-2 focus:ring-red-600" checked/>
@@ -159,20 +287,20 @@
                   </div>
                 </div>
     
-                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-sm hover:shadow-stone-50">
+                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-md hover:shadow-red-600">
                   <div class="flex items-start">
                     <div class="flex h-5 items-center">
                       <input id="fedex" aria-describedby="fedex-text" type="radio" name="delivery-method" value="" class="h-4 w-4 border-red-500 bg-zinc-900 text-red-600 focus:ring-2 focus:ring-red-600" />
                     </div>
     
                     <div class="ms-4 text-sm">
-                      <label for="fedex" class="font-medium leading-none text-stone-50"> Shopee Checkout </label>
-                      <p id="fedex-text" class="mt-1 text-xs font-normal text-stone-200/50">Proceed to Shopee for checkout and delivery</p>
+                      <label for="fedex" class="font-medium leading-none text-stone-50"> LBC Delivery </label>
+                      <p id="fedex-text" class="mt-1 text-xs font-normal text-stone-200/50">Contact LBC for your delivery</p>
                     </div>
                   </div>
                 </div>
     
-                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-sm hover:shadow-stone-50">
+                <div class="rounded-lg border border-zinc-600 bg-zinc-900 p-4 ps-4 transition-all delay-100 duration-200 hover:scale-105 hover:shadow-md hover:shadow-red-600">
                   <div class="flex items-start">
                     <div class="flex h-5 items-center">
                       <input id="express" aria-describedby="express-text" type="radio" name="delivery-method" value="" class="h-4 w-4 border-red-500 bg-zinc-900 text-red-600 focus:ring-2 focus:ring-red-600" />
@@ -186,29 +314,76 @@
                 </div>
               </div>
             </div>
+
+            <!-- Shipping Address -->
+            <div class="mb-6 border-2 border-zinc-600 p-6 pb-12 rounded-md">
+              <h2 class="text-xl font-bold text-zinc-950 pb-6">Shipping Address</h2>
+              <div class="grid grid-cols-2 gap-4">
+                  <div>
+                      <label for="first_name" class="block text-sm font-medium text-zinc-950 mb-1">First Name</label>
+                      <input type="text" id="first_name" class="w-full rounded-lg border py-2 px-3" required>
+                  </div>
+                  <div>
+                      <label for="last_name" class="block text-sm font-medium text-zinc-950 mb-1">Last Name</label>
+                      <input type="text" id="last_name" class="w-full rounded-lg border py-2 px-3" required>
+                  </div>
+              </div>
+
+              <div class="mt-4">
+                  <label for="address" class="block text-sm font-medium text-zinc-950 mb-1">Address</label>
+                  <input type="text" id="address" class="w-full rounded-lg border py-2 px-3" required>
+              </div>
+
+              <div class="mt-4">
+                  <label for="city" class="block text-sm font-medium text-zinc-950 mb-1">City</label>
+                  <input type="text" id="city" class="w-full rounded-lg border py-2 px-3" required>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 mt-4">
+                  <div>
+                      <label for="state" class="block text-sm font-medium text-zinc-9500 mb-1">State</label>
+                      <input type="text" id="state" class="w-full rounded-lg border py-2 px-3" required>
+                  </div>
+                  <div>
+                      <label for="zip" class="block text-sm font-medium text-zinc-950 mb-1">ZIP Code</label>
+                      <input type="text" id="zip" class="w-full rounded-lg border py-2 px-3" required>
+                  </div>
+              </div>
+          </div>
+            <div>
+              <label for="voucher" class="mb-2 block text-sm font-medium text-zinc-900"> Enter a gift card, voucher or promotional code </label>
+              <div class="flex max-w-full items-center gap-4">
+                <input type="text" id="voucher" class="block w-full rounded-lg border border-zinc-600 bg-zinc-900 p-2.5 text-sm text-gray-400 focus:border-zinc-500 focus:ring-zinc-400" placeholder="CALEJ 700" />
+                <button type="button" id="Voucher" class="flex items-center justify-center rounded-lg bg-red-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-red-500 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400">Apply</button>
+              </div>
+            </div>
+
     
           </div>
     
-          <div class="mt-6 w-full space-y-6 sm:mt-8 lg:mt-0 lg:max-w-xs xl:max-w-md">
+          <div class="w-full space-y-6 sm:mt-8 lg:mt-0 lg:max-w-xs xl:max-w-md">
             <div class="flow-root">
               <div class="-my-3 divide-y divide-gray-200">
                 <dl class="flex items-center justify-between gap-4 py-3">
-                  <dt class="text-base font-normal text-stone-50">Subtotal</dt>
-                  <dd id="subtotalPrice" class="text-base font-medium text-stone-200/75"></dd>
+                  <dt class="text-base font-normal text-zinc-950">Subtotal</dt>
+                  <dd id="subtotalPrice" class="text-base font-medium text-zinc-900/50"></dd>
                 </dl>     
 
                 <dl class="flex items-center justify-between gap-4 py-3">
                   <dt class="text-base font-bold text-red-600">Total</dt>
-                  <dd id="totalPrice" class="text-base font-bold text-stone-100"></dd>
+                  <dd id="totalPrice" class="text-base font-bold text-zinc-950"></dd>
                 </dl>
               </div>
-            </div>
-    
-    
+            </div>            
+          
             <div class="space-y-3">
               <button type="submit" id="successButton" data-modal-target="successModal" data-modal-toggle="successModal" class="flex w-full items-center justify-center rounded-lg bg-red-600 px-5 py-2.5 text-sm font-semibold text-white focus:outline-none focus:ring-4 focus:ring-red-500 transition-all delay-10 duration-50 border-b-4 border-stone-50 hover:border-2 hover:scale-105">Place Order</button>
-    
-              <p class="text-sm font-normal text-stone-50/75 ">One or more items in your cart require an account. <a href="# " title="" class="font-medium text-primary-700 underline hover:no-underline">Sign in or create an account now.</a>.</p>
+              <p class="text-sm font-normal text-zinc-950/50 ">One or more items in your cart require an account. <a href="# " title="" class="font-medium text-primary-700 underline hover:no-underline">Sign in or create an account now.</a>.</p>
+            </div>
+            <div class="mt-6 flex items-center justify-center gap-8">
+              <img class="h-8 w-auto" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/brand-logos/paypal.svg" alt="Paypal Logo" />
+              <img class="h-8 w-auto" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/brand-logos/mastercard.svg" alt="MasterCard Logo" />
+              <img class="h-8 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/5/52/GCash_logo.svg" alt="Gcash Logo" />
             </div>
           </div>
         </div>
@@ -216,21 +391,21 @@
     </section>
 
     <!-- Main modal -->
-<div id="successModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
-<div class="relative p-4 w-full max-w-md h-full md:h-auto">
-    <!-- Modal content -->
-    <div class="relative p-12 py-8 text-center bg-white rounded-lg shadow sm:p-5 mt-5">
+    <div id="successModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
+      <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="relative p-12 py-8 text-center bg-white rounded-lg shadow sm:p-5 mt-5">
 
-        <div class="w-12 h-12 rounded-full bg-green-300 p-2 flex items-center justify-center mx-auto mb-3.5">
-            <svg aria-hidden="true" class="w-8 h-8 text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-            <span class="sr-only">Success</span>
+                <div class="w-12 h-12 rounded-full bg-green-300 p-2 flex items-center justify-center mx-auto mb-3.5">
+                    <svg aria-hidden="true" class="w-8 h-8 text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Success</span>
+                </div>
+                <p class="mb-4 text-lg font-semibold text-zinc-950">Successfully Placed Your Order!<p>
+
+            </div>
         </div>
-        <p class="mb-4 text-lg font-semibold text-zinc-950">Successfully Placed Your Order!<p>
-
-    </div>
-</div>
-</div>
-</section>
+      </div>
+    </section>
 <!-- == Checkout End == -->
 
 
@@ -247,7 +422,68 @@
 
     <script src="JavaScript/Navigation Bar.js"></script>
 
-    <script src="JavaScript/Footer.js"></script>
+    <script src="JavaScript/Footer.js"></script>    
+
+    <script src="JavaScript/Products__Storage.js"></script>
+
+    <script src="JavaScript/Populate.js"></script>
+
+    <script src="JavaScript/Add_To_Cart.js"></script>
+
+    <script>    
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('form');
+        const placeOrderButton = document.getElementById('successButton');
+        const successModal = document.getElementById('successModal');
+
+        // Function to check if all required fields are filled
+        const checkFormValidity = () => {
+          const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+          const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+          placeOrderButton.disabled = !allFilled;
+        };
+
+        // Initial check to set button state
+        checkFormValidity();
+
+        // Attach input and change event listeners to all required fields
+        form.addEventListener('input', checkFormValidity);
+        form.addEventListener('change', checkFormValidity);
+
+        // Handle form submission
+        form.addEventListener('submit', (event) => {
+          event.preventDefault(); // Prevent actual form submission
+
+          if (placeOrderButton.disabled) {
+            return; // Prevent modal display if the button is disabled
+          }
+
+          // Show the modal
+          successModal.classList.remove('hidden');
+
+          // Redirect after 3 seconds
+          setTimeout(() => {
+            window.location.href = 'ThankYou.html';
+          }, 4000);
+        });
+
+        // Handle closing the modal
+        const closeModalButton = successModal.querySelector('[data-modal-toggle="successModal"]');
+        closeModalButton.addEventListener('click', () => {
+          successModal.classList.add('hidden');
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('fade-in');
+        const elements = document.querySelectorAll('.fade-in, .slide-up');
+        elements.forEach(el => {
+          el.classList.add('fade-in');
+        });
+      });
+    </script>
   
 </body>
 </html>

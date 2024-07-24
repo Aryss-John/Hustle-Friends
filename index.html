@@ -17,6 +17,8 @@
 </head> 
 <body class="bg-neutral-50 overflow-x-hidden">  
 
+  
+
 <!-- == NavBar Start == -->
 <section id="NavBarContainerinLandingPage">
   
@@ -91,87 +93,9 @@
    <script src="JavaScript/Banner.js"></script>
 
    <script src="JavaScript/Load__Featured.js"></script>
+
+   <script src="JavaScript/Add_To_Cart.js"></script>
    
-   <script>
-    // Load cart from localStorage when page loads
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-      function saveCart() {
-          localStorage.setItem('cart', JSON.stringify(cart));
-      }
-
-      function addToCart(productName, productPrice) {
-          const existingItem = cart.find(item => item.name === productName);
-
-          if (existingItem) {
-              existingItem.quantity += 1;
-          } else {
-              const cartItem = { name: productName, price: productPrice, quantity: 1 };
-              cart.push(cartItem);
-          }
-
-          saveCart();
-          renderCart();
-          showModal(); // Show the modal after adding to cart
-      }
-
-      function removeFromCart(productName) {
-          cart = cart.filter(item => item.name !== productName);
-          saveCart();
-          renderCart();
-      }
-
-      function renderCart() {
-          const cartContainer = document.getElementById('cart');
-          const checkoutContainer = document.getElementById('checkout-container');
-          cartContainer.innerHTML = '';
-
-          if (cart.length === 0) {
-              cartContainer.innerHTML = '<p class="text-gray-700">No items in cart.</p>';
-              checkoutContainer.classList.add('hidden');
-              return;
-          }
-
-          cart.forEach(item => {
-              const itemDiv = document.createElement('div');
-              itemDiv.className = 'flex justify-between mb-2 items-center';
-              itemDiv.innerHTML = `
-                  <span>${item.name}</span>
-                  <span>₱${item.price.toFixed(2)} x ${item.quantity}</span>
-                  <button onclick="removeFromCart('${item.name}')" class="ml-4 text-red-500">Remove</button>
-              `;
-              cartContainer.appendChild(itemDiv);
-          });
-
-          const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-          const subtotal = total; // Or however you want to calculate it
-
-          const totalDiv = document.createElement('div');
-          totalDiv.className = 'flex justify-between mt-4 pt-4 border-t';
-          totalDiv.innerHTML = `<strong>Total</strong><strong>₱${total.toFixed(2)}</strong>`;
-          cartContainer.appendChild(totalDiv);
-
-          // Store prices in localStorage
-          localStorage.setItem('totalPrice', total.toFixed(2));
-          localStorage.setItem('subtotalPrice', subtotal.toFixed(2));
-
-          checkoutContainer.classList.remove('hidden');
-      }
-
-      function showModal() {
-          document.getElementById('successModal').classList.remove('hidden');
-      }
-
-      function hideModal() {
-          document.getElementById('successModal').classList.add('hidden');
-      }
-
-      // Close modal when the close button is clicked
-      document.getElementById('closeModal').addEventListener('click', hideModal);
-
-      // Render cart on page load
-      renderCart();
-  </script>
 
 </body>
 </html>

@@ -20,12 +20,12 @@
    
   <section id="NavBarContainer">
 
-  </section>
- 
+  </section> 
 
     <div class="bg-stone-100 pt-24 py-28 antialiased md:pt-28 sm:pt-24 sm:py-28 lg:py-34 rounded-lg">
+
         <div class="mx-auto max-w-screen-2xl px-4 md:px-8 mt-8">
-          <div class="rounded-lg bg-stone-200/50 px-4 py-6 md:py-8 lg:py-12">
+          <div class="rounded-lg bg-zinc-200/75 px-4 py-6 md:py-8 lg:py-12">
             <p class="mb-2 text-center font-semibold text-red-600 md:mb-3 lg:text-lg">About Us</p>
       
             <h2 class="mb-4 text-center text-2xl font-bold text-zinc-950 md:mb-6 lg:text-3xl">Hustle Friends</h2>
@@ -33,19 +33,78 @@
             <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">Hustle Friends is more than just streetwear—it's a revolution in motion. Built for those who live life on their own terms, our gear is designed to keep up with your relentless drive. From gritty urban streets to the hustle of your everyday grind, Hustle Friends is your armor. </p>
           </div>
         </div>
-      </div>
+      
+
+      <div class="px-4 pt-8 pb-12 mx-auto max-w-screen-2xl w-full lg:px-6">
+        <h2 class="mb-8 text-4xl tracking-tight font-bold text-zinc-950 text-center">Frequently asked questions</h2>
+        <div class="w-full max-w-screen-2xl mx-auto border-t border-red-600 pt-8">
+            <div class="text-left space-y-4">
+                <div id="accordion-collapse" data-accordion="collapse">
+                    <h2 id="accordion-collapse-heading-1">
+                        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 gap-3 transition-all ease-in-out duration-300" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                            <span>What is Flowbite?</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 transition-transform duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-1" class="hidden transition-max-height duration-500 ease-in-out overflow-hidden" aria-labelledby="accordion-collapse-heading-1">
+                        <div class="p-5 border border-b-0 border-gray-200">
+                            <p class="mb-2 text-zinc-950">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
+                            <p class="text-zinc-950">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+                        </div>
+                    </div>
+                    <h2 id="accordion-collapse-heading-2">
+                        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 gap-3 transition-all ease-in-out duration-300" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                            <span>Is there a Figma file available?</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 transition-transform duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-2" class="hidden transition-max-height duration-500 ease-in-out overflow-hidden" aria-labelledby="accordion-collapse-heading-2">
+                        <div class="p-5 border border-b-0 border-gray-200">
+                            <p class="mb-2 text-zinc-950">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
+                            <p class="text-zinc-950">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+                        </div>
+                    </div>
+                    <h2 id="accordion-collapse-heading-3">
+                        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 gap-3 transition-all ease-in-out duration-300" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                            <span>What are the differences between Flowbite and Tailwind UI?</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 transition-transform duration-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-collapse-body-3" class="hidden transition-max-height duration-500 ease-in-out overflow-hidden" aria-labelledby="accordion-collapse-heading-3">
+                        <div class="p-5 border border-t-0 border-gray-200">
+                            <p class="mb-2 text-zinc-950">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
+                            <p class="mb-2 text-zinc-950">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
+                            <p class="mb-2 text-zinc-950">Learn more about these technologies:</p>
+                            <ul class="ps-5 text-zinc-950 list-disc">
+                                <li><a href="https://flowbite.com/pro/" class="text-blue-600 hover:underline">Flowbite Pro</a></li>
+                                <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 hover:underline">Tailwind UI</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 
     <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-      <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+      <div class="flex items-center justify-center gap-8 sm:mb-8 md:mb-12 border-b border-red-600">
         <div class="flex items-center gap-12">
-          <h2 class="text-2xl font-bold text-gray-800 lg:text-3xl">Gallery</h2> 
+          <h2 class="text-2xl font-bold text-zinc-950 lg:text-3xl mb-3">Gallery</h2> 
         </div>
     
       </div>
   
       <div class="columns-1 md:columns-2 xl:columns-3 gap-7 ">
         <div class=" break-inside-avoid mb-8">
-        <img class="h-auto max-w-full rounded-lg" src="https://i.ibb.co/ZV2KM23/HF-About-Hero.jpg" alt="Gallery image" />
+        <img class="h-auto max-w-full rounded-lg" src="https://i.ibb.co/nnZ53Qn/452445456-1022521849875302-3826453502049721797-n.jpg" alt="Gallery image" />
         </div>
         <div class=" break-inside-avoid  mb-8">
         <img class="h-auto max-w-full rounded-lg" src="https://i.ibb.co/PYxwrQT/448266244-996662945794526-7265312460478881969-n.jpg" alt="Gallery image" />
@@ -61,6 +120,15 @@
         </div>
         <div class=" break-inside-avoid  mb-8">
         <img class="h-auto max-w-full rounded-lg" src="https://i.ibb.co/R4zt6kN/447641898-990916009702553-2241533143250739370-n.jpg" alt="Gallery image" />
+        </div>
+        <div class=" break-inside-avoid  mb-8">
+          <img class="h-auto max-w-full rounded-lg" src="https://i.ibb.co/ZV2KM23/HF-About-Hero.jpg" alt="Gallery image" />
+        </div>
+        <div class=" break-inside-avoid  mb-8">
+          <img class="h-auto max-w-full rounded-lg" src="https://i.ibb.co/6wR8j0h/404419802-852251070235715-4838725750938458155-n.jpg" alt="Gallery image" />
+        </div>
+        <div class=" break-inside-avoid  mb-8">
+          <img class="h-auto max-w-full rounded-lg" src="https://i.ibb.co/W0jDFnW/445234638-985780590216095-2227364464140171206-n.jpg" alt="Gallery image" />
         </div>
         </div>
     </div>
@@ -87,6 +155,8 @@
     <script src="JavaScript/Products__Storage.js"></script>
 
     <script src="JavaScript/Populate.js"></script>
+
+    <script src="JavaScript/Add_To_Cart.js"></script>
   
 </body>
 </html>

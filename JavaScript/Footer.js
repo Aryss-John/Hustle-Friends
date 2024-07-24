@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <p class="mb-4 text-zinc-600">For those who hustle nowadaze.</p>
           <ul class="flex flex-wrap justify-center items-center mb-6 text-stone-200">
               <li>
-                  <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+                  <a href="/About.html" class="mr-4 hover:underline md:mr-6">About</a>
               </li>
               <li>
                   <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function() {
                   <a href="#" class="mr-4 hover:underline md:mr-6">Terms & Conditions</a>
               </li>
               <li>
-                  <a href="#" class="mr-4 hover:underline md:mr-6">Facebook</a>
+                  <a href="https://www.facebook.com/hustlefriendstreetwear" class="mr-4 hover:underline md:mr-6">Facebook</a>
               </li>
               <li>
-                  <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
+                  <a href="/About.html" class="mr-4 hover:underline md:mr-6">FAQs</a>
               </li>
               <li>
-                  <a href="#" class="mr-4 hover:underline md:mr-6">Contact</a>
+                  <a href="/ContactUs.html" class="mr-4 hover:underline md:mr-6">Contact</a>
               </li>
           </ul>
           <span class="text-sm text-zinc-400 sm:text-center">© 2020 <a href="#" class="hover:underline">Hustle Friends™</a>. All Rights Reserved.</span>
