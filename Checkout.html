@@ -201,22 +201,22 @@
             </div>
 
 
-          <!-- Credit Card Form -->
-            <div id="CreditCard" class="border-2 border-zinc-600  p-8 pt-10 rounded-lg">
+          <!-- Debit Card Form -->
+            <div id="DebitCard" class="border-2 border-zinc-600 p-8 pt-10 rounded-lg">
               <form action="#" class="w-full rounded-lg border-2 border-zinc-600 pb-12 bg-white shadow-sm sm:p-6 lg:max-w-xl lg:p-8">
                 <div class="mb-6 grid grid-cols-2 gap-4">
                   <div class="col-span-2 sm:col-span-1">
-                    <label for="full_name" class="mb-2 block text-sm font-medium text-gray-900"> Full name (as displayed on card)* </label>
-                    <input type="text" id="full_name" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="Bonnie Green" required />
+                    <label for="dc_full_name" class="mb-2 block text-sm font-medium text-gray-900"> Full name (as displayed on card)* </label>
+                    <input type="text" id="dc_full_name" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="Bonnie Green" required />
                   </div>
       
                   <div class="col-span-2 sm:col-span-1">
-                    <label for="card-number-input" class="mb-2 block text-sm font-medium text-gray-900"> Card number* </label>
-                    <input type="number" id="card-number-input" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="^4[0-9]{12}(?:[0-9]{3})?$" required />
+                    <label for="dc_card_number" class="mb-2 block text-sm font-medium text-gray-900"> Card number* </label>
+                    <input type="number" id="dc_card_number" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="^4[0-9]{12}(?:[0-9]{3})?$" required />
                   </div>
       
                   <div>
-                    <label for="card-expiration-input" class="mb-2 block text-sm font-medium text-gray-900">Card expiration* </label>
+                    <label for="dc_card_expiration" class="mb-2 block text-sm font-medium text-gray-900">Card expiration* </label>
                     <div class="relative">
                       <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5">
                         <svg class="h-4 w-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -227,11 +227,11 @@
                           />
                         </svg>
                       </div>
-                      <input datepicker datepicker-format="mm/yy" id="card-expiration-input" type="text" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 ps-9 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="12/23" required />
+                      <input datepicker datepicker-format="mm/yy" id="dc_card_expiration" type="text" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 ps-9 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="12/23" required />
                     </div>
                   </div>
                   <div>
-                    <label for="cvv-input" class="mb-2 flex items-center gap-1 text-sm font-medium text-gray-900">
+                    <label for="dc_cvv" class="mb-2 flex items-center gap-1 text-sm font-medium text-gray-900">
                       CVV*
                       <button data-tooltip-target="cvv-desc" data-tooltip-trigger="hover" class="text-gray-400 hover:text-gray-900">
                         <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
@@ -243,28 +243,28 @@
                         <div class="tooltip-arrow" data-popper-arrow></div>
                       </div>
                     </label>
-                    <input type="number" id="cvv-input" aria-describedby="helper-text-explanation" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="•••" required />
+                    <input type="number" id="dc_cvv" aria-describedby="helper-text-explanation" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="•••" required />
                   </div>
                 </div>      
               </form>
             </div>
 
-          <!-- Debit Card -->
-            <div id="DebitCard" class="border-2 border-zinc-600  p-8 pt-10 rounded-lg hidden">
+          <!-- Credit Card Form -->
+            <div id="CreditCard" class="hidden">
               <form action="#" class="w-full rounded-lg border-2 border-zinc-600 pb-12 bg-white shadow-sm sm:p-6 lg:max-w-xl lg:p-8">
                 <div class="mb-6 grid grid-cols-2 gap-4">
                   <div class="col-span-2 sm:col-span-1">
-                    <label for="full_name" class="mb-2 block text-sm font-medium text-gray-900"> Full name (as displayed on card)* </label>
-                    <input type="text" id="full_name" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="Bonnie Green" required />
+                    <label for="cc_full_name" class="mb-2 block text-sm font-medium text-gray-900"> Full name (as displayed on card)* </label>
+                    <input type="text" id="cc_full_name" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="Bonnie Green" required />
                   </div>
       
                   <div class="col-span-2 sm:col-span-1">
-                    <label for="card-number-input" class="mb-2 block text-sm font-medium text-gray-900"> Card number* </label>
-                    <input type="number" id="card-number-input" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="^4[0-9]{12}(?:[0-9]{3})?$" required />
+                    <label for="cc_card_number" class="mb-2 block text-sm font-medium text-gray-900"> Card number* </label>
+                    <input type="number" id="cc_card_number" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 pe-10 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="^4[0-9]{12}(?:[0-9]{3})?$" required />
                   </div>
       
                   <div>
-                    <label for="card-expiration-input" class="mb-2 block text-sm font-medium text-gray-900">Card expiration* </label>
+                    <label for="cc_card_expiration" class="mb-2 block text-sm font-medium text-gray-900">Card expiration* </label>
                     <div class="relative">
                       <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5">
                         <svg class="h-4 w-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -275,11 +275,11 @@
                           />
                         </svg>
                       </div>
-                      <input datepicker datepicker-format="mm/yy" id="card-expiration-input" type="text" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 ps-9 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="12/23" required />
+                      <input datepicker datepicker-format="mm/yy" id="cc_card_expiration" type="text" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 ps-9 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="12/23" required />
                     </div>
                   </div>
                   <div>
-                    <label for="cvv-input" class="mb-2 flex items-center gap-1 text-sm font-medium text-gray-900">
+                    <label for="cc_cvv" class="mb-2 flex items-center gap-1 text-sm font-medium text-gray-900">
                       CVV*
                       <button data-tooltip-target="cvv-desc" data-tooltip-trigger="hover" class="text-gray-400 hover:text-gray-900">
                         <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
@@ -291,7 +291,7 @@
                         <div class="tooltip-arrow" data-popper-arrow></div>
                       </div>
                     </label>
-                    <input type="number" id="cvv-input" aria-describedby="helper-text-explanation" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="•••" required />
+                    <input type="number" id="cc_cvv" aria-describedby="helper-text-explanation" class="block w-full rounded-lg border border-zinc-600 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-zinc-900 focus:ring-zinc-500" placeholder="•••" required />
                   </div>
                 </div>      
               </form>
@@ -299,7 +299,7 @@
 
             <!-- COD Form -->
             <div id="CashonDelivery" class="hidden">
-
+              <p class="text-center text-md font-regular tracking-tight mb-4">Please prepare the exact amount.</p>
             </div>
 
             <!-- Gcash Button -->
@@ -413,13 +413,18 @@
             <div class="flow-root">
               <div class="-my-3 divide-y divide-gray-200">
                 <dl class="flex items-center justify-between gap-4 py-3">
+                  <dt class="text-base font-normal text-zinc-950">Savings</dt>
+                  <dd id="SavingsPrice" class="text-base font-medium text-green-600"></dd>
+                </dl> 
+
+                <dl class="flex items-center justify-between gap-4 py-3">
                   <dt class="text-base font-normal text-zinc-950">Subtotal</dt>
                   <dd id="subtotalPrice" class="text-base font-medium text-zinc-900/50"></dd>
                 </dl>     
 
                 <dl class="flex items-center justify-between gap-4 py-3">
                   <dt class="text-base font-bold text-red-600">Total</dt>
-                  <dd id="totalPrice" class="text-base font-bold text-zinc-950"></dd>
+                  <dd id="checkoutTotalPrice" class="text-base font-bold text-zinc-950"></dd>
                 </dl>
               </div>
             </div>            
@@ -478,7 +483,9 @@
 
     <script src="JavaScript/Add_To_Cart.js"></script>
 
-    <script>    
+
+  <script>   
+
       document.addEventListener('DOMContentLoaded', () => {
         const form = document.querySelector('form');
         const placeOrderButton = document.getElementById('successButton');
@@ -521,37 +528,117 @@
           successModal.classList.add('hidden');
         });
       });
-    </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Function to handle payment method changes
-    function handlePaymentMethodChange() {
-      // Get all payment forms
-      const paymentForms = document.querySelectorAll('#CreditCard, #DebitCard, #CashonDelivery, #Gcash, #PayPal');
+  </script>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Function to handle payment method changes
+      function handlePaymentMethodChange() {
+        // Get all payment forms
+        const paymentForms = document.querySelectorAll('#CreditCard, #DebitCard, #CashonDelivery, #Gcash, #PayPal');
+        
+        // Hide all payment forms
+        paymentForms.forEach(form => form.classList.add('hidden'));
+
+        // Get the selected payment method
+        const selectedMethod = document.querySelector('input[name="payment-method"]:checked').id;
+
+        // Show the form corresponding to the selected payment method
+        const selectedForm = document.getElementById(selectedMethod.replace('Radio', ''));
+        if (selectedForm) {
+          selectedForm.classList.remove('hidden');
+        }
+      }
+
+      // Attach the change event to all payment method radio buttons
+      document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
+        radio.addEventListener('change', handlePaymentMethodChange);
+      });
+
+      // Initial call to set the default form visible
+      handlePaymentMethodChange();
+    });
+
+  </script>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const creditCardRadio = document.getElementById('CreditCardRadio');
+      const debitCardRadio = document.getElementById('DebitCardRadio');
       
-      // Hide all payment forms
-      paymentForms.forEach(form => form.classList.add('hidden'));
+      const creditCardForm = document.getElementById('CreditCard');
+      const debitCardForm = document.getElementById('DebitCard');
 
-      // Get the selected payment method
-      const selectedMethod = document.querySelector('input[name="payment-method"]:checked').id;
+      const creditCardInputs = creditCardForm.querySelectorAll('input[required]');
+      const debitCardInputs = debitCardForm.querySelectorAll('input[required]');
 
-      // Show the form corresponding to the selected payment method
-      const selectedForm = document.getElementById(selectedMethod.replace('Radio', ''));
-      if (selectedForm) {
-        selectedForm.classList.remove('hidden');
+      const toggleRequiredAttributes = (formInputs, shouldRequire) => {
+        formInputs.forEach(input => {
+          if (shouldRequire) {
+            input.setAttribute('required', 'required');
+          } else {
+            input.removeAttribute('required');
+          }
+        });
+      };
+
+      const handlePaymentMethodChange = () => {
+        if (creditCardRadio.checked) {
+          creditCardForm.classList.remove('hidden');
+          debitCardForm.classList.add('hidden');
+          toggleRequiredAttributes(creditCardInputs, true);
+          toggleRequiredAttributes(debitCardInputs, false);
+        } else if (debitCardRadio.checked) {
+          creditCardForm.classList.add('hidden');
+          debitCardForm.classList.remove('hidden');
+          toggleRequiredAttributes(creditCardInputs, false);
+          toggleRequiredAttributes(debitCardInputs, true);
+        }
+      };
+
+      creditCardRadio.addEventListener('change', handlePaymentMethodChange);
+      debitCardRadio.addEventListener('change', handlePaymentMethodChange);
+
+      handlePaymentMethodChange(); // Run initially to set the correct required attributes
+    });
+
+  </script>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const paymentMethodRadios = document.querySelectorAll('input[name="payment-method"]');
+    const creditCardFields = document.querySelectorAll('#CreditCard input');
+    const debitCardFields = document.querySelectorAll('#DebitCard input');
+
+    function updateRequiredFields() {
+      const selectedPaymentMethod = document.querySelector('input[name="payment-method"]:checked').id;
+
+      // Clear required attribute from all fields
+      creditCardFields.forEach(input => input.required = false);
+      debitCardFields.forEach(input => input.required = false);
+
+      // Add required attribute based on selected payment method
+      if (selectedPaymentMethod === 'CreditCardRadio') {
+        creditCardFields.forEach(input => input.required = true);
+      } else if (selectedPaymentMethod === 'DebitCardRadio') {
+        debitCardFields.forEach(input => input.required = true);
       }
     }
 
-    // Attach the change event to all payment method radio buttons
-    document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
-      radio.addEventListener('change', handlePaymentMethodChange);
+    // Attach event listener to each radio button
+    paymentMethodRadios.forEach(radio => {
+      radio.addEventListener('change', updateRequiredFields);
     });
 
-    // Initial call to set the default form visible
-    handlePaymentMethodChange();
+    // Initial call to set the correct required fields
+    updateRequiredFields();
   });
-</script>
+
+  </script>
 
   
 </body>

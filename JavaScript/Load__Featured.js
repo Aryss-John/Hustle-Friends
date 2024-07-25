@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                   <p id="product-price" class="text-3xl font-bold mb-1 ml-1 leading-tight text-gray-900">₱550</p>
       
-                  <button onclick="addToCart('HF Red Flower Tee', 650)" type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
+                  <button onclick="addToCart('HF Red Flower Tee', 650, 'https://i.ibb.co/z8044J9/449646257-1014761163451801-5842622221926959076-n.jpg')" type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
                     <svg class="-ms-2 me-2 h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
                     </svg>
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   <div class="flex items-center justify-end gap-1">
                     <a href="Product Page/HF 8-Bal Tee">
 
-                    <button type="button" class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 ">
+                    <button type="button" class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900">
                       <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z" />
                         <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                   <p id="product-price" class="text-3xl font-bold mb-1 ml-1 leading-tight text-gray-900">₱750</p>
       
-                  <button onclick="addToCart('HF 8-Ball Tee', 750)" type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
+                  <button onclick="addToCart('HF 8-Ball Tee', 750, 'https://i.ibb.co/X4bTLXj/431675899-923530339774454-7713866171662698597-n.jpg')" type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
                     <svg class="-ms-2 me-2 h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
                     </svg>
@@ -138,12 +138,12 @@ document.addEventListener("DOMContentLoaded", function() {
                   </div>
 
                   <div class="flex items-center justify-end gap-1">
-                    <a href="#">
+                    <a href="Product Pages/HF Cozy Mesh Shorts.html">
 
                     <button type="button" class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 ">
                       <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="transparent" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z" />
-                        <path stroke="transparent" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        <path stroke="currentcolor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z" />
+                        <path stroke="currentcolor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                       </svg>
                     </a>
                     </button>            
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                   <p id="product-price" class="text-3xl font-bold mb-1 ml-1 leading-tight text-gray-900">₱350</p>
       
-                  <button onclick="addToCart('HF Trapstar Mesh Shorts', 350)" type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
+                  <button onclick="addToCart('HF Trapstar Mesh Shorts', 350, 'https://i.ibb.co/jv8NKP6/449066503-1004540705006750-9192293920099988532-n.jpg')" type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
                     <svg class="-ms-2 me-2 h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
                     </svg>
@@ -181,19 +181,17 @@ document.addEventListener("DOMContentLoaded", function() {
               <div class="pt-6">
                 <div class="mb-4 flex items-center justify-between gap-4">
                   <div class="flex items-center gap-2 mt-1">
-                    <div
-                      class="h-5 w-5 rounded border border-gray-900 bg-lime-950"
-                    ></div>
+                    <div class="h-5 w-5 rounded border border-gray-900 bg-lime-950"></div>                 
       
                   </div>
       
                    <div class="flex items-center justify-end gap-1">
-                    <a href="Product Pages/Hustle_Over_Love.html">
+                    <a href="Product Pages/HF Hustler's Club Tee.html">
 
-                    <button type="button" class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 ">
+                    <button type="button" class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900">
                       <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="transparent" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z" />
-                        <path stroke="transparent" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        <path stroke="currentcolor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z" />
+                        <path stroke="currentcolor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                       </svg>
                     </a>
                     </button>            
@@ -207,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                   <p id="product-price" class="text-3xl font-bold mb-1 ml-1 leading-tight text-gray-900">₱650</p>
       
-                  <button onclick="addToCart('HF Hustler's Club', 350)" type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
+                  <button onclick="addToCart('HF Hustler's Club', 350, 'https://i.ibb.co/QJQjSFR/448201772-992197736241047-2041936251521898012-n.jpg')" type="button" class="add-to-cart inline-flex items-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500">
                     <svg class="-ms-2 me-2 h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h1.5L8 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm.75-3H7.5M11 7H6.312M17 4v6m-3-3h6" />
                     </svg>

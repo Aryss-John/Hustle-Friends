@@ -54,7 +54,7 @@
                 <span id="cartTotalPrice" class="font-bold">₱0.00</span>
             </div>
             <a href="Checkout.html">
-              <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-500 transition-all border-b-4 border-zinc-900 hover:border-2">Proceed to Checkout</button>
+              <button id="proceedToCheckout" class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-500 transition-all border-b-4 border-zinc-900 hover:border-2">Proceed to Checkout</button>
             </a>
         </div>
     </div>
@@ -84,6 +84,16 @@
           });
         });
       </script>
+
+<script>
+  document.getElementById('proceedToCheckout').addEventListener('click', function() {
+    let totalPrice = document.getElementById('cartTotalPrice').innerText;
+    localStorage.setItem('totalPrice', totalPrice);
+});
+
+</script>
       
+
+        
   </body>
   </html>

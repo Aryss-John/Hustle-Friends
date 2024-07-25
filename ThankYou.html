@@ -66,8 +66,16 @@
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 
     <script src="JavaScript/Navigation Bar.js"></script>
+
     <script src="JavaScript/Footer.js"></script>
     
-  
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        localStorage.removeItem('ShoppingBag');
+        updateCartPage();
+    });
+    </script>
+
+
 </body>
 </html>
