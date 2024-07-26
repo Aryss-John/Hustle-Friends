@@ -84,79 +84,80 @@
   </script>
 
 
-<script>
-  function sendTotal() {
-    var total = document.getElementById("cartTotalPrice").textContent.trim();
-    if (total.startsWith('₱')) {
-        total = total.substring(1).replace(',', '');
+  <script>
+    function sendTotal() {
+      var total = document.getElementById("cartTotalPrice").textContent.trim();
+      if (total.startsWith('₱')) {
+          total = total.substring(1).replace(',', '');
+      }
+      localStorage.setItem('total', total);
     }
-    localStorage.setItem('total', total);
-  }
 
-  function updateCartPage() {
-    const cartItems = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
-    const cartItemsList = document.getElementById('cartItemsList');
-    const cartTotalPrice = document.getElementById('cartTotalPrice');
-    const proceedToCheckout = document.getElementById('proceedToCheckout');
-    cartItemsList.innerHTML = '';
+    function updateCartPage() {
+      const cartItems = JSON.parse(localStorage.getItem('ShoppingBag')) || [];
+      const cartItemsList = document.getElementById('cartItemsList');
+      const cartTotalPrice = document.getElementById('cartTotalPrice');
+      const proceedToCheckout = document.getElementById('proceedToCheckout');
+      cartItemsList.innerHTML = '';
 
-    if (cartItems.length === 0) {
-        const noItems = document.createElement('li');
-        noItems.className = 'px-4 py-2 text-sm';
-        noItems.textContent = 'No items in cart';
-        cartItemsList.appendChild(noItems); 
-        cartTotalPrice.textContent = '₱0.00';
-        proceedToCheckout.disabled = true;
-        proceedToCheckout.classList.add('bg-gray-400', 'cursor-not-allowed');
-        proceedToCheckout.classList.remove('bg-red-600', 'hover:bg-red-500');
-    } else {
-        let totalPrice = 0;
-        cartItems.forEach(item => {
-            totalPrice += item.price * item.quantity;
-            const li = document.createElement('li');
-            li.className = 'flex items-center bg-white p-4 rounded-lg shadow-lg border-2 border-zinc-200 mt-4';
-            li.innerHTML = `
-                <img src="${item.image1}" alt="${item.productName}" class="w-16 h-16 object-cover mr-4">
-                <div class="flex-1">
-                    <h3 class="font-bold text-xl">${item.productName}</h3>
-                    <p class="text-gray-600 font-medium">₱${item.price}</p>
-                </div>
-                <div class="flex items-center">
-                    <button onclick="decrementQuantity('${item.productName}')" class="text-red-600 hover:text-red-800 transition-all mx-2">-</button>
-                    <span>${item.quantity}</span>
-                    <button onclick="incrementQuantity('${item.productName}')" class="text-green-600 hover:text-green-800 transition-all mx-2">+</button>
-                    <button onclick="removeFromCart('${item.productName}')" class="ml-4 text-red-600 hover:text-red-800 transition-all">Remove</button>
-                </div>
-            `;
-            cartItemsList.appendChild(li);
-        });
-        cartTotalPrice.textContent = `₱${totalPrice.toFixed(2)}`;
-        if (totalPrice === 0) {
-            proceedToCheckout.disabled = true;
-            proceedToCheckout.classList.add('bg-gray-400', 'cursor-not-allowed');
-            proceedToCheckout.classList.remove('bg-red-600', 'hover:bg-red-500');
-        } else {
-            proceedToCheckout.disabled = false;
-            proceedToCheckout.classList.add('bg-red-600', 'hover:bg-red-500');
-            proceedToCheckout.classList.remove('bg-gray-400', 'cursor-not-allowed');
-        }
-        // Ensure the total is sent to localStorage whenever it updates
-        sendTotal();
+      if (cartItems.length === 0) {
+          const noItems = document.createElement('li');
+          noItems.className = 'px-4 py-2 text-sm';
+          noItems.textContent = 'No items in cart';
+          cartItemsList.appendChild(noItems); 
+          cartTotalPrice.textContent = '₱0.00';
+          proceedToCheckout.disabled = true;
+          proceedToCheckout.classList.add('bg-gray-400', 'cursor-not-allowed');
+          proceedToCheckout.classList.remove('bg-red-600', 'hover:bg-red-500');
+      } else {
+          let totalPrice = 0;
+          cartItems.forEach(item => {
+              totalPrice += item.price * item.quantity;
+              const li = document.createElement('li');
+              li.className = 'flex items-center bg-white p-4 rounded-lg shadow-lg border-2 border-zinc-200 mt-4';
+              li.innerHTML = `
+                  <img src="${item.image1}" alt="${item.productName}" class="w-16 h-16 object-cover mr-4">
+                  <div class="flex-1">
+                      <h3 class="font-bold text-xl">${item.productName}</h3>
+                      <p class="text-gray-600 font-medium">₱${item.price}</p>
+                  </div>
+                  <div class="flex items-center">
+                      <button onclick="decrementQuantity('${item.productName}')" class="text-red-600 hover:text-red-800 transition-all mx-2">-</button>
+                      <span>${item.quantity}</span>
+                      <button onclick="incrementQuantity('${item.productName}')" class="text-green-600 hover:text-green-800 transition-all mx-2">+</button>
+                      <button onclick="removeFromCart('${item.productName}')" class="ml-4 text-red-600 hover:text-red-800 transition-all">Remove</button>
+                  </div>
+              `;
+              cartItemsList.appendChild(li);
+          });
+          cartTotalPrice.textContent = `₱${totalPrice.toFixed(2)}`;
+          if (totalPrice === 0) {
+              proceedToCheckout.disabled = true;
+              proceedToCheckout.classList.add('bg-gray-400', 'cursor-not-allowed');
+              proceedToCheckout.classList.remove('bg-red-600', 'hover:bg-red-500');
+          } else {
+              proceedToCheckout.disabled = false;
+              proceedToCheckout.classList.add('bg-red-600', 'hover:bg-red-500');
+              proceedToCheckout.classList.remove('bg-gray-400', 'cursor-not-allowed');
+          }
+          // Ensure the total is sent to localStorage whenever it updates
+          sendTotal();
+      }
     }
-  }
 
-  // Call updateCartPage on DOMContentLoaded to initialize the cart
-  document.addEventListener('DOMContentLoaded', updateCartPage);
-</script>
+    // Call updateCartPage on DOMContentLoaded to initialize the cart
+    document.addEventListener('DOMContentLoaded', updateCartPage);
+  </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.add('fade-in');
-    const elements = document.querySelectorAll('.fade-in, .slide-up');
-    elements.forEach(el => {
-      el.classList.add('fade-in');
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+      const elements = document.querySelectorAll('.fade-in, .slide-up');
+      elements.forEach(el => {
+        el.classList.add('fade-in');
+      });
     });
-  });
-</script>
+  </script>
+
 </body>
 </html>

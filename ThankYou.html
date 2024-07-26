@@ -11,17 +11,6 @@
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
 
-    <!-- Inside the <head> tag of ThankYou.html -->
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const paymentMethod = localStorage.getItem('selectedPaymentMethod');
-        if (paymentMethod) {
-        document.getElementById('PaymentMethod').textContent = paymentMethod;
-        }
-    });
-    </script> 
-
-
 </head>
 <body class="overflow-x-hidden">
 
@@ -35,25 +24,25 @@
         <h2 class="text-xl font-semibold text-gray-900 sm:text-2xl mb-2">Thanks for your order!</h2>
         <p class="text-gray-500 mb-6 md:mb-8">Your order <a href="#" id="OrderID" class="font-medium text-gray-900 hover:underline"></a> will be processed within 24 hours during working days. We will notify you by email once your order has been shipped.</p>
         <div class="space-y-4 sm:space-y-2 rounded-lg border border-gray-100 bg-gray-50 p-6 mb-6 md:mb-8">
-            <dl class="sm:flex items-center justify-between gap-4">
-                <dt class="font-normal mb-1 sm:mb-0 text-gray-500">Date</dt>
+            <dl class="sm:flex items-center justify-between gap-6">
+                <dt class="font-normal mb-4 text-gray-500">Date</dt>
                 <dd id="DateToday" class="font-medium text-gray-900 sm:text-end"></dd>
             </dl>
-            <dl class="sm:flex items-center justify-between gap-4">
-                <dt class="font-normal mb-1 sm:mb-0 text-gray-500">Payment Method</dt>
-                <dd id="PaymentMethod" class="font-medium text-gray-900 sm:text-end">{PaymentMethod}</dd>
+            <dl class="sm:flex items-center justify-between gap-6">
+                <dt class="font-normal mb-4  text-gray-500">Payment Method</dt>
+                <dd id="payment" class="font-medium text-gray-900 sm:text-end">{PaymentMethod}</dd>
             </dl>
-            <dl class="sm:flex items-center justify-between gap-4">
-                <dt class="font-normal mb-1 sm:mb-0 text-gray-500">Name</dt>
-                <dd class="font-medium text-gray-900 sm:text-end">{UserName}</dd>
+            <dl class="sm:flex items-center justify-between gap-6">
+                <dt class="font-normal mb-4  text-gray-500">Name</dt>
+                <dd id="name" class="font-medium text-gray-900 sm:text-end">{UserName}</dd>
             </dl>
-            <dl class="sm:flex items-center justify-between gap-4">
-                <dt class="font-normal mb-1 sm:mb-0 text-gray-500">Address</dt>
-                <dd id="UserAddress" class="font-medium text-gray-900 sm:text-end">{UserAddress}</dd>
+            <dl class="sm:flex items-center justify-between gap-6">
+                <dt class="font-normal mb-4  text-gray-500">Address</dt>
+                <dd id="fullAddress" class="font-medium text-gray-900 sm:text-end">{UserAddress}</dd>
             </dl>
-            <dl class="sm:flex items-center justify-between gap-4">
-                <dt class="font-normal mb-1 sm:mb-0 text-gray-500">Phone</dt>
-                <dd id="UserPhone" class="font-medium text-gray-900 sm:text-end">{UserPhoneNumber}</dd>
+            <dl class="sm:flex items-center justify-between gap-6">
+                <dt class="font-normal mb-4 text-gray-500">Phone</dt>
+                <dd id="phone" class="font-medium text-gray-900 sm:text-end">{UserPhoneNumber}</dd>
             </dl>
         </div>
         <div class="flex items-center space-x-4">        
@@ -103,15 +92,27 @@
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
             dateTodayElement.textContent = today.toLocaleDateString(undefined, options);
     </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.body.classList.add('fade-in');
-      const elements = document.querySelectorAll('.fade-in, .slide-up');
-      elements.forEach(el => {
-        el.classList.add('fade-in');
-      });
-    });
-  </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('fade-in');
+        const elements = document.querySelectorAll('.fade-in, .slide-up');
+        elements.forEach(el => {
+            el.classList.add('fade-in');
+        });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Retrieve and set localStorage values            
+            document.getElementById("payment").innerHTML = localStorage.getItem("payment");
+            document.getElementById("name").innerHTML = localStorage.getItem("fullname");
+            document.getElementById("fullAddress").innerHTML = localStorage.getItem("fullAddress");
+            document.getElementById("phone").innerHTML = localStorage.getItem("phone");
+        });
+    </script>
+
 
 </body>
 </html>

@@ -14,20 +14,6 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-        .shake {
-            animation: shake 0.5s;
-        }
-
-        @keyframes shake {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            50% { transform: translateX(5px); }
-            75% { transform: translateX(-5px); }
-            100% { transform: translateX(0); }
-        }
-    </style>
-
 </head>
 <body class="overflow-x-hidden">
 
@@ -96,6 +82,16 @@
     </div>
 </section>
 
+<!-- Success Modal -->
+<div id="successModal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm mx-auto">
+        <h2 class="text-lg font-bold mb-4">Successfully sent your concern</h2>
+        <p>Your message has been successfully sent. Thank you for reaching out!</p>
+        <button id="closeModalButton" class="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400">Close</button>
+    </div>
+</div>
+
+
 <section id="FooterContainer">
     <!-- Footer content -->
 </section>
@@ -122,6 +118,40 @@
       });
     });
 </script>
-    
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('form');
+      const successModal = document.getElementById('successModal');
+      const closeModalButton = document.getElementById('closeModalButton');
+      
+      // Handle form submission
+      form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent actual form submission
+  
+        // Get input values
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+  
+        // Validate inputs
+        if (email && subject && message) {
+          // Show the success modal
+          successModal.classList.remove('hidden');
+          
+          // Optionally clear the form
+          form.reset();
+        } else {
+          // Handle invalid form inputs (optional)
+          alert('Please fill in all required fields.');
+        }
+      });
+  
+      // Handle closing the modal
+      closeModalButton.addEventListener('click', () => {
+        successModal.classList.add('hidden');
+      });
+    });
+  </script>
+  
 </body>
 </html>

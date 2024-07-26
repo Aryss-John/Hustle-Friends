@@ -144,12 +144,18 @@ var content = `
 
              <!-- User Profile -->
        
-               <div class="flex items-center lg:order-2  rounded-lg hover:bg-zinc-800 px-3">
-                 <a href="Log-In.html">
+               <div id="userDropdownButton1" data-dropdown-toggle="userDropdown1"  class="flex items-center lg:order-2  rounded-lg hover:bg-zinc-800 px-3">
                    <img src="/Assets/User Profile Icon.png" class="w-8 h-8 lg:me-1" alt="">
-                 </a>
                </div>
-       
+               
+             <div id="userDropdown1" class="hidden z-10 w-56 divide-y divide-gray-100 overflow-hidden overflow-y-auto rounded-lg bg-zinc-800 antialiased shadow-lg">
+              <ul class="p-2 text-start text-sm font-medium text-stone-50">
+                <li><a href="UserProfile.html" title="" class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-zinc-500"> My Account </a></li>
+                <li><a href="Log-In.html" title="" class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-zinc-500"> Log In </a></li>
+                <li><a href="Sign-Up.html" title="" class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-zinc-500"> Sign Up </a></li>
+              </ul>        
+            </div>
+
              <!-- Hamburger Menu Button -->
              <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 text-sm text-stone-50 rounded-lg md:hidden hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-cta" aria-expanded="false">
                <span class="sr-only">Open main menu</span>
