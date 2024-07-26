@@ -105,34 +105,44 @@
     <script src="JavaScript/Populate.js"></script>
     <script src="JavaScript/Add_To_Cart.js"></script>
 
-        <!-- Product Image Hver Animation  -->
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const productImages = document.querySelectorAll('.product-image');
-                productImages.forEach(productImage => {
-                    const defaultImage = productImage.querySelector('.default-image');
-                    const hoverImage = productImage.querySelector('.hover-image');
-        
-                    productImage.style.position = 'relative';
-                    defaultImage.style.transition = 'opacity 0.5s ease-in-out';
-                    hoverImage.style.transition = 'opacity 0.5s ease-in-out';
-                    hoverImage.style.position = 'absolute';
-                    hoverImage.style.top = '0';
-                    hoverImage.style.left = '0';
-                    hoverImage.style.opacity = '0';
-        
-                    productImage.addEventListener('mouseover', () => {
-                        defaultImage.style.opacity = '0';
-                        hoverImage.style.opacity = '1';
-                    });
-        
-                    productImage.addEventListener('mouseout', () => {
-                        defaultImage.style.opacity = '1';
-                        hoverImage.style.opacity = '0';
-                    });
-                });
-            });
-            </script>
+  <!-- Product Image Hver Animation  -->
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const productImages = document.querySelectorAll('.product-image');
+          productImages.forEach(productImage => {
+              const defaultImage = productImage.querySelector('.default-image');
+              const hoverImage = productImage.querySelector('.hover-image');
+  
+              productImage.style.position = 'relative';
+              defaultImage.style.transition = 'opacity 0.5s ease-in-out';
+              hoverImage.style.transition = 'opacity 0.5s ease-in-out';
+              hoverImage.style.position = 'absolute';
+              hoverImage.style.top = '0';
+              hoverImage.style.left = '0';
+              hoverImage.style.opacity = '0';
+  
+              productImage.addEventListener('mouseover', () => {
+                  defaultImage.style.opacity = '0';
+                  hoverImage.style.opacity = '1';
+              });
+  
+              productImage.addEventListener('mouseout', () => {
+                  defaultImage.style.opacity = '1';
+                  hoverImage.style.opacity = '0';
+              });
+          });
+      });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+      const elements = document.querySelectorAll('.fade-in, .slide-up');
+      elements.forEach(el => {
+        el.classList.add('fade-in');
+      });
+    });
+  </script>
 
 </body>
 </html>

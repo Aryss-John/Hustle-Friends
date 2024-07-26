@@ -103,10 +103,15 @@
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
             dateTodayElement.textContent = today.toLocaleDateString(undefined, options);
     </script>
-    <script>
-        
-    </script>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+      const elements = document.querySelectorAll('.fade-in, .slide-up');
+      elements.forEach(el => {
+        el.classList.add('fade-in');
+      });
+    });
+  </script>
 
 </body>
 </html>

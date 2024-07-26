@@ -125,5 +125,15 @@
     
         <script src="JavaScript/Account_Manager.js"></script>
 
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              document.body.classList.add('fade-in');
+              const elements = document.querySelectorAll('.fade-in, .slide-up');
+              elements.forEach(el => {
+                el.classList.add('fade-in');
+              });
+            });
+          </script>
+
 </body>
 </html>
