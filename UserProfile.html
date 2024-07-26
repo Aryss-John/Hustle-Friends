@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Hustle Friends</title>
+
+    <!-- Tab Icon -->
+    <link rel="icon" href="Assets/HF Rockstar Emblem.png" type="image/png">
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <h1>Hello</h1>
+    <h2>Name: <span id="fName"></span> <span id="lName"></span></h2>
+    <h2>Your accound is <span id="email"></span></h2>
+    <h2>Your password is <span id="pWord"></span></h2>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById("fName").innerHTML = localStorage.getItem("firstName");
+        document.getElementById("lName").innerHTML = localStorage.getItem("lastName");
+        document.getElementById("email").innerHTML = localStorage.getItem("email");
+        document.getElementById("pWord").innerHTML = localStorage.getItem("password");
+    });
+    </script>
+</body>
+</html>

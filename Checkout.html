@@ -640,6 +640,17 @@
 
   </script>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const total = localStorage.getItem("total");
+        if (total) {
+            document.getElementById("subtotalPrice").textContent = `₱${parseFloat(total).toFixed(2)}`;
+            document.getElementById("checkoutTotalPrice").textContent = `₱${parseFloat(total).toFixed(2)}`;
+        }
+    });
+
+  </script>
+
   
 </body>
 </html>

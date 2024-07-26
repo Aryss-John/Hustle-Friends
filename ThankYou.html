@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+    <title>Thank You - Hustle Friends</title>
 
     <!-- Tab Icon -->
     <link rel="icon" href="Assets/HF Rockstar Emblem.png" type="image/png">
 
     <!-- Flowbite CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Inside the <head> tag of ThankYou.html -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const paymentMethod = localStorage.getItem('selectedPaymentMethod');
+        if (paymentMethod) {
+        document.getElementById('PaymentMethod').textContent = paymentMethod;
+        }
+    });
+    </script> 
 
 
 </head>
@@ -20,35 +30,34 @@
   </section>
 
 
-  <section class="bg-white py-8 antialiased pb-40 pt-36">
+  <section class="bg-white py-20 antialiased pb-40 pt-44">
     <div class="mx-auto max-w-2xl px-4 2xl:px-0">
         <h2 class="text-xl font-semibold text-gray-900 sm:text-2xl mb-2">Thanks for your order!</h2>
-        <p class="text-gray-500 mb-6 md:mb-8">Your order <a href="#" class="font-medium text-gray-900 hover:underline">#7564804</a> will be processed within 24 hours during working days. We will notify you by email once your order has been shipped.</p>
+        <p class="text-gray-500 mb-6 md:mb-8">Your order <a href="#" id="OrderID" class="font-medium text-gray-900 hover:underline"></a> will be processed within 24 hours during working days. We will notify you by email once your order has been shipped.</p>
         <div class="space-y-4 sm:space-y-2 rounded-lg border border-gray-100 bg-gray-50 p-6 mb-6 md:mb-8">
             <dl class="sm:flex items-center justify-between gap-4">
                 <dt class="font-normal mb-1 sm:mb-0 text-gray-500">Date</dt>
-                <dd class="font-medium text-gray-900 sm:text-end">14 May 2024</dd>
+                <dd id="DateToday" class="font-medium text-gray-900 sm:text-end"></dd>
             </dl>
             <dl class="sm:flex items-center justify-between gap-4">
                 <dt class="font-normal mb-1 sm:mb-0 text-gray-500">Payment Method</dt>
-                <dd class="font-medium text-gray-900 sm:text-end">JPMorgan monthly installments</dd>
+                <dd id="PaymentMethod" class="font-medium text-gray-900 sm:text-end">{PaymentMethod}</dd>
             </dl>
             <dl class="sm:flex items-center justify-between gap-4">
                 <dt class="font-normal mb-1 sm:mb-0 text-gray-500">Name</dt>
-                <dd class="font-medium text-gray-900 sm:text-end">Flowbite Studios LLC</dd>
+                <dd class="font-medium text-gray-900 sm:text-end">{UserName}</dd>
             </dl>
             <dl class="sm:flex items-center justify-between gap-4">
                 <dt class="font-normal mb-1 sm:mb-0 text-gray-500">Address</dt>
-                <dd class="font-medium text-gray-900 sm:text-end">34 Scott Street, San Francisco, California, USA</dd>
+                <dd id="UserAddress" class="font-medium text-gray-900 sm:text-end">{UserAddress}</dd>
             </dl>
             <dl class="sm:flex items-center justify-between gap-4">
                 <dt class="font-normal mb-1 sm:mb-0 text-gray-500">Phone</dt>
-                <dd class="font-medium text-gray-900 sm:text-end">+(123) 456 7890</dd>
+                <dd id="UserPhone" class="font-medium text-gray-900 sm:text-end">{UserPhoneNumber}</dd>
             </dl>
         </div>
-        <div class="flex items-center space-x-4">
-            <a href="#" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none">Track your order</a>
-            <a href="#" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-100 ">Return to shopping</a>
+        <div class="flex items-center space-x-4">        
+            <a href="Catalog.html" class="py-2.5 px-5 text-sm font-medium text-stone-100 focus:outline-none bg-red-600 rounded-lg border border-gray-200 hover:bg-stone-100 hover:text-red-600 focus:z-10 focus:ring-4 focus:ring-gray-100 transition-all">Return to shopping</a>
         </div>
     </div>
   </section>
@@ -74,6 +83,28 @@
         localStorage.removeItem('ShoppingBag');
         updateCartPage();
     });
+    </script>
+
+    <script>
+         // Generate a random 6-digit OrderID
+         const generateOrderID = () => {
+                return Math.floor(100000 + Math.random() * 900000);
+            };
+
+            // Set the generated OrderID to the OrderID element
+            const orderIDElement = document.getElementById('OrderID');
+            orderIDElement.textContent = generateOrderID();
+    </script>
+
+    <script>
+         // Get today's date
+         const dateTodayElement = document.getElementById('DateToday');
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            dateTodayElement.textContent = today.toLocaleDateString(undefined, options);
+    </script>
+    <script>
+        
     </script>
 
 

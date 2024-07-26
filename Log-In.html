@@ -48,17 +48,17 @@
 <body class="relative h-screen flex items-center justify-center bg-zinc-950 overflow-x-hidden">
 
     <!-- Background Video -->
-     <iframe class="bg-video" src="https://www.youtube.com/embed/LXufydjPiuk?autoplay=1&controls=0&mute=1&loop=1&playlist=LXufydjPiuk" title="YouTube video player" frameborder="0"  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe class="bg-video" src="https://www.youtube.com/embed/LXufydjPiuk?autoplay=1&controls=0&mute=1&loop=1&playlist=LXufydjPiuk" title="YouTube video player" frameborder="0"  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     <div class="flex bg-zinc-900/50 custom-shadow rounded-lg flex-col justify-center py-12 px-20 lg:px-20">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img class="mx-auto h-20 w-auto" src="Logo/HustleFriends-Logo__NoBG.png" alt="Your Company">
-          <h2 class="mt-2 text-center text-2xl font-bold leading-9 tracking-tight text-stone-100">Log in to your account</h2>
+        <img class="mx-auto h-20 w-auto" src="Logo/HustleFriends-Logo__NoBG.png" alt="Your Company">
+        <h2 class="mt-2 text-center text-2xl font-bold leading-9 tracking-tight text-stone-100">Log in to your account</h2>
         </div>
-      
+    
         <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-sm">
             <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-sm">
-                <form class="space-y-6" action="#" method="POST">
+                <form class="space-y-6" action="UserProfile.html" onsubmit="return AccountLogIn()">
 
                     <div class="input-container">
                         <label for="email" class="block text-sm font-medium leading-6 text-stone-100">Email address</label>
@@ -67,7 +67,7 @@
                             <i class="icon fas fa-envelope"></i>
                         </div>
                     </div>
-          
+        
                     <div class="input-container">
                         <div class="flex items-center justify-between">
                             <label for="password" class="block text-sm font-medium leading-6 text-stone-100">Password</label>
@@ -78,19 +78,19 @@
                             <i id="password-toggle" class="password-toggle fas fa-eye"></i>
                         </div>
                     </div>
-          
+        
                     <div>
-                        <button type="submit" class="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">Sign in</button>
+                        <button type="submit" class="flex w-full justify-center rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400">Log in</button>
                     </div>
                 </form>
-      
-      
-          <p class="mt-10 text-center text-sm text-zinc-400">
+    
+    
+        <p class="mt-10 text-center text-sm text-zinc-400">
             Don't have an account?
             <a href="Sign-Up.html" class="font-bold leading-6 text-red-600 hover:text-red-500 hover:underline">Register</a>
-          </p>
+        </p>
         </div>
-      </div>
+    </div>
 
         <!-- Tailwind CSS -->
         <script src="https://cdn.tailwindcss.com"></script>
@@ -98,6 +98,7 @@
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 
         <script>
+            
             document.getElementById('password-toggle').addEventListener('click', function() {
                 const passwordInput = document.getElementById('password');
                 const type = passwordInput.type === 'password' ? 'text' : 'password';
@@ -105,8 +106,10 @@
                 this.classList.toggle('fa-eye');
                 this.classList.toggle('fa-eye-slash');
             });
+        
         </script>
-    
+
+        <script src="JavaScript/Account_Manager.js"></script>
 
 </body>
 </html>
